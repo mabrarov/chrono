@@ -1,0 +1,2554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files\ma">
+      <UniqueIdentifier>{f022cf81-b3b2-48eb-88c5-60e65348a5ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files\ma\chrono">
+      <UniqueIdentifier>{2a7a80a1-591e-4557-b130-249fb789052e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files\ma\chrono\translation">
+      <UniqueIdentifier>{520b3df6-d15d-4851-be48-e9223dd1c033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\ma">
+      <UniqueIdentifier>{b07dfe87-3391-4a34-80a8-7937d5beafce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\ma\chrono">
+      <UniqueIdentifier>{e5b9e542-ce79-4342-9813-7b26e212952f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ma">
+      <UniqueIdentifier>{a73d9614-5b0f-4dc5-8788-bcee0e584082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ma\chrono">
+      <UniqueIdentifier>{3f5f9863-3289-47ec-aea1-2a26c697dd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ma\chrono\model">
+      <UniqueIdentifier>{aec68e2e-4936-47cf-bc2e-5d9e9efb6fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ma">
+      <UniqueIdentifier>{e2ffecc0-4ec8-4f18-943d-2810b4beb7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ma\chrono">
+      <UniqueIdentifier>{e979435f-f83a-4197-8532-1d8d9a21715a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ma\chrono\images">
+      <UniqueIdentifier>{a65e3b73-1cbd-4167-a81b-1f80b4cf7d1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ma\chrono\translation">
+      <UniqueIdentifier>{4ddf2d70-25ba-4893-9628-b0baeb4f07c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ma">
+      <UniqueIdentifier>{456f46ee-6fbc-48e5-925b-78d2cbdb9562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ma\chrono">
+      <UniqueIdentifier>{23e586d2-0246-4bf1-b933-2c846abe20e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ma\chrono\model">
+      <UniqueIdentifier>{1c20cf88-fbc5-4e71-b888-9c08127b6950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug_Win32">
+      <UniqueIdentifier>{d8b09238-748c-49fb-9fa4-dde2e8ad5cc8}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug_x64">
+      <UniqueIdentifier>{3676bdb5-2abf-4af8-94cb-422db24b734f}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release_Win32">
+      <UniqueIdentifier>{30744304-1171-425b-87cf-920981bf6806}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release_x64">
+      <UniqueIdentifier>{d6d4c654-4cbb-4a5f-93fe-d542f78f7eec}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Win32">
+      <UniqueIdentifier>{d3799cde-5959-45ca-a172-81a79337ebdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\x64">
+      <UniqueIdentifier>{02eecc07-2307-437f-adb2-7e767f2f34ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resources\ma\chrono\translation\chrono_ru.ts">
+      <Filter>Translation Files\ma\chrono\translation</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\kbugbuster.svg">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-refresh.svg">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\application-exit.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\applications-system.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\bookmarks-organize.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\clock.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\configure.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\dialog-password.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-edit.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-export.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-new.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-open.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-preview.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\document-print.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\edit-clear-locationbar-rtl.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\edit-delete.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\go-down.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\go-next.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\go-previous.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\go-up.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\help-about.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\help-contents.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\lightning.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\network-server-database.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\preferences-system.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\rating.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\remove-filter.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\system-help.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\system-run.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\system-users.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\text-plain.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\user-group-properties.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\user-home.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\user-identity.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\user-properties.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-calendar-timeline.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-filter.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-history.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-list-text.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-media-artist.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-pim-journal.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\view-statistics.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\images\window-duplicate.svgz">
+      <Filter>Resource Files\ma\chrono\images</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\translation\chrono_ru.qm">
+      <Filter>Resource Files\ma\chrono\translation</Filter>
+    </None>
+    <None Include="..\..\resources\ma\chrono\translation\qt_ru.qm">
+      <Filter>Resource Files\ma\chrono\translation</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\ma\chrono\autoenterprisecardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\bankcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\bolcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\ccdcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\conditiondialog.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\contractcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\counterpartcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\countrycardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\currencycardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\databaseconnectdialog.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\deppointcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\filterdialog.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\icdoccardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\ictcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\insurancecardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\lcreditcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\paysheetcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\residentcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\sbolcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\sortdialog.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\summarypage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\ttermcardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\ma\chrono\usercardpage.ui">
+      <Filter>Form Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\addressbar.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\amountdelegate.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\autoenterprisecardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\autoenterpriselistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\autoenterprisetablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\bankcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\banklistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\banktablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\basictablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\bolcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\bollistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\boltablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\breadcrumbbar.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\cardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\cardtaskwindow.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ccdcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ccdlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ccdtablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\commandbar.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\commandbutton.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\commanddialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\conditiondialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractbollistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractboltablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractccdlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractccdtablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractinsurancelistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractinsurancetablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractpaysheetlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractpaysheettablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractrelatedlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractsbollistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contractsboltablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\contracttablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\counterpartcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\counterpartlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\counterparttablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\countrycardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\countrylistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\countrynumericcodedelegate.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\countrytablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\currencycardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\currencylistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\currencynumericcodedelegate.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\currencytablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\databaseconnectdialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\databasemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\datapage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\deppointcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\deppointlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\deppointtablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\filterdialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\icdoccardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\icdoclistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\icdoctablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ictcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ictlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\icttablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\insurancecardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\insurancelistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\insurancetablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\lcreditcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\lcreditlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\lcredittablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\listpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\listselectdialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\listtaskwindow.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\navigationbutton.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\navigationmodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\navigationwindow.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\page.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\paysheetcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\paysheetlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\paysheettablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ratedelegate.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\residentcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\residentlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\residenttablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\sbolcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\sbollistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\sboltablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\sortdialog.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\summarylistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\summarypage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\taskwindow.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\taskwindowmanager.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ttermcardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ttermlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\ttermtablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\usercardpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\userlistpage.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\include\ma\chrono\usertablemodel.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\resources\chrono.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ma\chrono\actionutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\addressbar_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\autoenterprisetablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\banktablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\basicfiltercondition.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\basictablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\binaryfiltercondition.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\boltablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\breadcrumbbar_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\buildenvironment.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\cardpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\cardtaskwindow_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\ccdtablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\commandbar_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\commandbutton_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\conditiondialog_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\constants.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractbollistpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractboltablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractccdlistpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractccdtablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractinsurancelistpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractinsurancetablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractpaysheetlistpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractpaysheettablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractsbollistpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contractsboltablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\contracttablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\counterparttablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\countrytablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\currencytablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\databaseconnectdialog_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\databasemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\dateutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\dbconstants.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\deppointtablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\excelexporter.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\exportdatalist.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\fielddescription.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\filterdialog_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\filterexpression.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\generator.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\generator_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\historylist.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\icdoctablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\icttablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\insurancetablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\lcredittablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\listpage_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\listtaskwindow_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\localeutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\modelutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\navigationbutton_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\navigationmodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\onefieldbasedfiltercondition.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\orderexpression.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\page_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\paysheettablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\residenttablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\resourcemanager.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\resourcemanager_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\sboltablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\sortdialog_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\sqlutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\tabledescription.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\taskwindow_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\taskwindowmanager_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\ttermtablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\types.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\unaryfiltercondition.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\userdefinedfilter.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\userdefinedorder.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\usertablemodel_fwd.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\widgetutility.h">
+      <Filter>Header Files\ma\chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\autoenterprise.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\autoenterprise_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\bank.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\bank_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\bol.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\bol_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\ccd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\ccd_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\contract.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\contract_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\counterpart.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\counterpart_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\country.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\country_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\currency.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\currency_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\currencyamount.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\currencyamount_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\decimalamount.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\deppoint.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\deppoint_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\icdoc.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\icdoc_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\ict.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\ict_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\insurance.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\insurance_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\lcredit.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\lcredit_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\paysheet.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\paysheet_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\rateamount.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\rateamount_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\resident.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\resident_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\sbol.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\sbol_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\tterm.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\tterm_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\user.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ma\chrono\model\user_fwd.h">
+      <Filter>Header Files\ma\chrono\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\resources\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_autoenterprisecardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_bankcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_bolcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_ccdcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_conditiondialog.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_contractcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_counterpartcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_countrycardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_currencycardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_databaseconnectdialog.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_deppointcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_filterdialog.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_icdoccardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_ictcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_insurancecardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_lcreditcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_paysheetcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_residentcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_sbolcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_sortdialog.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_summarypage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_ttermcardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\x64\ui_usercardpage.h">
+      <Filter>Generated Files\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_autoenterprisecardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_bankcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_bolcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_ccdcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_conditiondialog.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_contractcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_counterpartcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_countrycardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_currencycardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_databaseconnectdialog.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_deppointcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_filterdialog.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_icdoccardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_ictcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_insurancecardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_lcreditcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_paysheetcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_residentcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_sbolcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_sortdialog.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_summarypage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_ttermcardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Win32\ui_usercardpage.h">
+      <Filter>Generated Files\Win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ma\chrono\actionutility.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\addressbar.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\amountdelegate.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\autoenterprisecardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\autoenterpriselistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\autoenterprisetablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\bankcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\banklistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\banktablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\basictablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\binaryfiltercondition.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\bolcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\bollistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\boltablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\breadcrumbbar.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\cardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\cardtaskwindow.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ccdcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ccdlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ccdtablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\commandbar.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\commandbutton.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\commanddialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\conditiondialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\constants.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractbollistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractboltablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractccdlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractccdtablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractinsurancelistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractinsurancetablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractpaysheetlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractpaysheettablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractrelatedlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractsbollistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contractsboltablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\contracttablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\counterpartcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\counterpartlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\counterparttablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\countrycardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\countrylistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\countrynumericcodedelegate.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\countrytablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\currencycardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\currencylistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\currencynumericcodedelegate.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\currencytablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\databaseconnectdialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\databasemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\datapage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\dateutility.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\dbconstants.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\deppointcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\deppointlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\deppointtablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\excelexporter.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\filterdialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\generator.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\icdoccardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\icdoclistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\icdoctablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ictcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ictlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\icttablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\insurancecardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\insurancelistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\insurancetablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\lcreditcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\lcreditlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\lcredittablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\listpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\listselectdialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\listtaskwindow.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\localeutility.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\modelutility.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\navigationbutton.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\navigationmodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\navigationwindow.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\page.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\paysheetcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\paysheetlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\paysheettablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ratedelegate.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\residentcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\residentlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\residenttablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\resourcemanager.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\sbolcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\sbollistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\sboltablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\sortdialog.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\summarypage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\taskwindow.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\taskwindowmanager.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ttermcardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ttermlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\ttermtablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\unaryfiltercondition.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\usercardpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\userlistpage.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\usertablemodel.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\widgetutility.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ma\chrono\model\decimalamount.cpp">
+      <Filter>Source Files\ma\chrono\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_userlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_userlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_userlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_userlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_usercardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_usercardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_usercardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_usercardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_taskwindow.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_taskwindow.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_taskwindow.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_taskwindow.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_summarypage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_summarypage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_summarypage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_summarypage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_sortdialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_sortdialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_sortdialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_sortdialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_page.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_page.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_page.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_page.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_listpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_listpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_listpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_listpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_filterdialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_filterdialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_filterdialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_filterdialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_datapage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_datapage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_datapage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_datapage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_databasemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_databasemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_databasemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_databasemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_commanddialog.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_commanddialog.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_commanddialog.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_commanddialog.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_commandbutton.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_commandbutton.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_commandbutton.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_commandbutton.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_commandbar.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_commandbar.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_commandbar.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_commandbar.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_cardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_cardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_cardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_cardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_bollistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_bollistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_bollistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_bollistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_banklistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_banklistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_banklistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_banklistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\Win32\moc_addressbar.cpp">
+      <Filter>Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\x64\moc_addressbar.cpp">
+      <Filter>Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\Win32\moc_addressbar.cpp">
+      <Filter>Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\x64\moc_addressbar.cpp">
+      <Filter>Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\x64\qrc_chrono.cpp">
+      <Filter>Generated Files\x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Win32\qrc_chrono.cpp">
+      <Filter>Generated Files\Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\chrono.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\resources\chrono.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

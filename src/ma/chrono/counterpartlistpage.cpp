@@ -1,0 +1,135 @@
+/*
+TRANSLATOR ma::chrono::CounterpartListPage
+*/
+
+//
+// Copyright (c) 2009-2013 Marat Abrarov (abrarov@mail.ru)
+//
+
+#include <QAction>
+#include <QTableView>
+#include <ma/chrono/constants.h>
+#include <ma/chrono/resourcemanager.h>
+#include <ma/chrono/databasemodel.h>
+#include <ma/chrono/counterparttablemodel.h>
+#include <ma/chrono/counterpartcardpage.h>
+#include <ma/chrono/counterpartlistpage.h>
+
+namespace ma
+{
+  namespace chrono
+  {    
+    CounterpartListPage::CounterpartListPage(const ResourceManagerPtr& resourceManager,
+      const TaskWindowManagerWeakPtr& taskWindowManager,
+      const DatabaseModelPtr& databaseModel,
+      const QActionSharedPtr& helpAction,       
+      const UserDefinedFilter& userDefinedFilter, 
+      const UserDefinedOrder& userDefinedOrder,
+      QWidget* parent)
+      : ListPage(resourceManager, taskWindowManager, databaseModel, helpAction, counterpartEntity, 
+          CounterpartTableModel::tableDescription(), userDefinedFilter, userDefinedOrder, parent)
+      , model_(new CounterpartTableModel(databaseModel, this, 
+          userDefinedFilter.getUserDefinedFilterExpression(),
+          userDefinedOrder.getUserDefinedOrderExpression()))
+    {       
+      setWindowIcon(resourceManager->getIcon(chronoIconName));
+      setWindowTitle(tr("Counterparts"));
+      createAction()->setText(tr("&New counterpart"));      
+      setModel(model_);
+
+      QObject::connect(databaseModel.get(), SIGNAL(connectionStateChanged()), SLOT(on_database_connectionStateChanged()));
+      QObject::connect(databaseModel.get(), SIGNAL(aboutToClose()), SLOT(on_database_aboutToClose()));      
+      QObject::connect(databaseModel.get(), SIGNAL(userUpdated(const ma::chrono::model::User&)), SLOT(on_database_userUpdated(const ma::chrono::model::User&)));      
+      QObject::connect(databaseModel.get(), SIGNAL(countryUpdated(const ma::chrono::model::Country&)), SLOT(on_database_countryUpdated(const ma::chrono::model::Country&)));      
+      QObject::connect(databaseModel.get(), SIGNAL(counterpartInserted(const ma::chrono::model::Counterpart&)), SLOT(on_database_counterpartInserted(const ma::chrono::model::Counterpart&)));
+      QObject::connect(databaseModel.get(), SIGNAL(counterpartUpdated(const ma::chrono::model::Counterpart&)), SLOT(on_database_counterpartUpdated(const ma::chrono::model::Counterpart&)));
+      QObject::connect(databaseModel.get(), SIGNAL(counterpartRemoved(const ma::chrono::model::Counterpart&)), SLOT(on_database_counterpartRemoved(const ma::chrono::model::Counterpart&)));
+
+      on_database_connectionStateChanged();
+    }
+
+    CounterpartListPage::~CounterpartListPage()
+    {
+    }
+
+    void CounterpartListPage::refresh()
+    {
+      model_->refresh();
+    }
+        
+    std::auto_ptr<ListPage> CounterpartListPage::clone(QWidget* parent) const
+    {
+      std::auto_ptr<ListPage> clonedPage(new CounterpartListPage(resourceManager(), taskWindowManager(), databaseModel(), helpAction(), userDefinedFilter(), userDefinedOrder(), parent));      
+      clonedPage->setWindowTitle(windowTitle());            
+      return clonedPage;
+    }
+
+    std::auto_ptr<CardPage> CounterpartListPage::createCardPage(CardPage::Mode mode, const OptionalQInt64& entityId) const
+    {
+      std::auto_ptr<CardPage> cardPage(new CounterpartCardPage(resourceManager(), taskWindowManager(), databaseModel(), helpAction(), mode, entityId));
+      return cardPage;
+    }
+
+    void CounterpartListPage::applyUserDefinedFilter(const UserDefinedFilter& userDefinedFilter)
+    {
+      model_->setFilterExpression(userDefinedFilter.getUserDefinedFilterExpression());
+    }
+
+    void CounterpartListPage::applyUserDefinedOrder(const UserDefinedOrder& userDefinedOrder)
+    {
+      model_->setOrderExpression(userDefinedOrder.getUserDefinedOrderExpression());
+    }
+
+    OptionalQString CounterpartListPage::relationalTextFromRow(int row) const
+    {
+      QVariant var = model_->data(model_->index(row, 3));
+      if (!var.isNull())
+      {          
+        if (var.canConvert<QString>())
+        {
+          return var.toString();
+        }        
+      }
+      return OptionalQString();
+    }
+
+    void CounterpartListPage::on_database_connectionStateChanged()
+    {
+      if (databaseModel()->isOpen())
+      {
+        model_->open();
+      }
+    }
+
+    void CounterpartListPage::on_database_aboutToClose()
+    {
+      model_->close();
+    }    
+
+    void CounterpartListPage::on_database_userUpdated(const ma::chrono::model::User& /*user*/)
+    {
+      model_->refresh();
+    }    
+
+    void CounterpartListPage::on_database_countryUpdated(const ma::chrono::model::Country& /*country*/)
+    {
+      model_->refresh();
+    }    
+
+    void CounterpartListPage::on_database_counterpartInserted(const ma::chrono::model::Counterpart& /*counterpart*/)
+    {
+      model_->refresh();
+    }
+
+    void CounterpartListPage::on_database_counterpartUpdated(const ma::chrono::model::Counterpart& /*counterpart*/)
+    {
+      model_->refresh();
+    }
+
+    void CounterpartListPage::on_database_counterpartRemoved(const ma::chrono::model::Counterpart& /*counterpart*/)
+    {
+      model_->refresh();
+    }
+
+  } // namespace chrono
+} //namespace ma
