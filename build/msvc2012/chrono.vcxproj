@@ -4803,7 +4803,7 @@ xcopy /Y /E "$(QTDIR)\plugins\sqldrivers\qsqlibase.dll" "$(OutDir)\sqldrivers"
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties UicDir=".\GeneratedFiles\$(PlatformName)" MocDir=".\GeneratedFiles\$(ConfigurationName)\$(PlatformName)" MocOptions="" RccDir=".\GeneratedFiles\$(PlatformName)" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="5.1.1 shared" Qt5Version_x0020_x64="5.1.1 shared x64" />
+      <UserProperties UicDir=".\GeneratedFiles\$(PlatformName)" MocDir=".\GeneratedFiles\$(ConfigurationName)\$(PlatformName)" MocOptions="" RccDir=".\GeneratedFiles\$(PlatformName)" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="5.2.0 shared" Qt5Version_x0020_x64="5.2.0 shared x64" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
