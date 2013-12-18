@@ -239,6 +239,9 @@
     <None Include="..\..\resources\ma\chrono\translation\qt_ru.qm">
       <Filter>Resource Files\ma\chrono\translation</Filter>
     </None>
+    <None Include="..\..\resources\ma\chrono\translation\qtbase_ru.qm">
+      <Filter>Resource Files\ma\chrono\translation</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\ma\chrono\autoenterprisecardpage.ui">
