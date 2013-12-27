@@ -6,7 +6,7 @@
 #include <QLocale>
 #include <QTranslator>
 
-#ifndef QT_DLL
+#if defined(QT_STATIC) || !(defined(QT_DLL) || defined(QT_SHARED))
 #include <QtPlugin>
 #endif
 
@@ -16,10 +16,16 @@
 #include <ma/chrono/navigationwindow.h>
 #include <ma/chrono/excelexporter.h>
 
-#ifndef QT_DLL
+#if defined(QT_STATIC) || !(defined(QT_DLL) || defined(QT_SHARED))
+
+#if QT_VERSION >= 0x050000
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+#endif
+
 Q_IMPORT_PLUGIN(qsvg)
 Q_IMPORT_PLUGIN(qsvgicon)
 Q_IMPORT_PLUGIN(qsqlibase)
+
 #endif
 
 namespace {
