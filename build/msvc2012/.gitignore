@@ -1,14 +1,6 @@
+/out/
 /*.sdf
 /*.opensdf
-/Release/
-/Debug/
-/GeneratedFiles/
 /*.suo
-/*.user
-/ipch/
-/Profile/
 /*.vsp
-/Test/
 /*.plog
-/*.tli
-/*.tlh
