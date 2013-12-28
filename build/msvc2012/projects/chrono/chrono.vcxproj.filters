@@ -99,6 +99,18 @@
     <Filter Include="Generated Files\x64">
       <UniqueIdentifier>{02eecc07-2307-437f-adb2-7e767f2f34ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Generated Files\Debug_static_Win32">
+      <UniqueIdentifier>{2382786d-b067-422a-99c7-4d6df111587e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release_static_Win32">
+      <UniqueIdentifier>{bc7a6c33-f5b1-41af-9e2d-2c3685c48e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release_static_x64">
+      <UniqueIdentifier>{862e1075-dce3-4cf9-a675-cd929631d9b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug_static_x64">
+      <UniqueIdentifier>{ced83f21-876e-46e6-821d-b2953565da31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\resources\ma\chrono\translation\chrono_ru.ts">
@@ -2542,6 +2554,852 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Win32\qrc_chrono.cpp">
       <Filter>Generated Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_addressbar.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_banklistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_bollistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_cardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_commandbar.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_commandbutton.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_commanddialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_databasemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_datapage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_filterdialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_listpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_page.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_sortdialog.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_summarypage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_taskwindow.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_usercardpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_userlistpage.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\Win32\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Debug_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_addressbar.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_banklistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_bollistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_cardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_commandbar.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_commandbutton.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_commanddialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_databasemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_datapage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_filterdialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_listpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_page.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_sortdialog.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_summarypage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_taskwindow.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_usercardpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_userlistpage.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release_static\Win32\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Release_static_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_addressbar.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_amountdelegate.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_autoenterprisecardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_autoenterpriselistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_autoenterprisetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_bankcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_banklistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_banktablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_basictablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_bolcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_bollistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_boltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_breadcrumbbar.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_cardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_cardtaskwindow.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ccdcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ccdlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_commandbar.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_commandbutton.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_commanddialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_conditiondialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractccdlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractccdtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractinsurancelistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractinsurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractpaysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractpaysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractrelatedlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractsbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contractsboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_contracttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_counterpartcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_counterpartlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_counterparttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_countrycardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_countrylistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_countrynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_countrytablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_currencycardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_currencylistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_currencynumericcodedelegate.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_currencytablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_databaseconnectdialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_databasemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_datapage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_deppointcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_deppointlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_deppointtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_filterdialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_icdoccardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_icdoclistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_icdoctablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ictcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ictlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_icttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_insurancecardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_insurancelistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_insurancetablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_lcreditcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_lcreditlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_lcredittablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_listpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_listselectdialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_listtaskwindow.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_navigationbutton.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_navigationmodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_navigationwindow.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_page.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_paysheetcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_paysheetlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_paysheettablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ratedelegate.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_residentcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_residentlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_residenttablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_sbolcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_sbollistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_sboltablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_sortdialog.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_summarylistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_summarypage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_taskwindow.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_taskwindowmanager.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ttermcardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ttermlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_ttermtablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_usercardpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_userlistpage.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug_static\x64\moc_usertablemodel.cpp">
+      <Filter>Generated Files\Debug_static_x64</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

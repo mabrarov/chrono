@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::SbolTableModel
 */
 
 //
-// Copyright (c) 2009-2013 Marat Abrarov (abrarov@mail.ru)
+// Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
 //
 
 #include <boost/make_shared.hpp>

@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::NavigationWindow
 */
 
 //
-// Copyright (c) 2009-2013 Marat Abrarov (abrarov@mail.ru)
+// Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
 //
 
 #include <memory>

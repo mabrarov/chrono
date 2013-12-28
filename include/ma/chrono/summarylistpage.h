@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2009-2010 Social Technologies (abrarov@mail.ru)
+// Copyright (c) 2009-2010 Social Technologies (abrarov@gmail.com)
 //
 
 #ifndef MA_CHRONO_SUMMARYLISTPAGE_H
