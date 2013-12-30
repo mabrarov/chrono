@@ -88,8 +88,8 @@ boost::shared_ptr<BasicFilterCondition> ConditionDialog::condition() const
 
 void ConditionDialog::updateState()
 {
-  bool fieldSelected = selectedField_;
-  bool conditionSelected = selectedConditionItem_;
+  bool fieldSelected = static_cast<bool>(selectedField_);
+  bool conditionSelected = static_cast<bool>(selectedConditionItem_);
   bool valueDefined = false;
   if (selectedConditionItem_)
   {
