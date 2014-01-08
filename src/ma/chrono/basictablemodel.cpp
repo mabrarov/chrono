@@ -6,6 +6,7 @@ TRANSLATOR ma::chrono::BasicTableModel
 // Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
 //
 
+#include <QChar>
 #include <QSqlDatabase>
 #include <ma/chrono/databasemodel.h>
 #include <ma/chrono/model/currencyamount.h>
@@ -122,7 +123,7 @@ OptionalQString BasicTableModel::retriveSelectSql()
 {
   if (!selectSql_)
   {
-    selectSql_.reset(selectSql());
+    selectSql_ = selectSql();
   }
   return selectSql_;
 }
@@ -131,20 +132,19 @@ OptionalQString BasicTableModel::retriveInternalFilterSql()
 {
   if (!internalFilterSql_)
   {
-    internalFilterSql_.reset(internalFilterSql());
+    internalFilterSql_ = internalFilterSql();
   }
   return internalFilterSql_;
 }
 
 OptionalQString BasicTableModel::retriveUserFilterSql()
 {
-  static const QString implicationSql(" and ");
   if (!userFilterSql_ && !filterExpression_.isEmpty())
   {
     QString result = filterExpression_.sql();
     if (!result.isEmpty())
     {
-      userFilterSql_.reset(result);
+      userFilterSql_ = result;
     }
   }  
   return userFilterSql_;
@@ -159,7 +159,7 @@ OptionalQString BasicTableModel::retriveUserOrderSql()
     QString result = orderExpression_.sql();        
     if (!result.isEmpty())
     {
-      userOrderSql_.reset(result);
+      userOrderSql_ = result;
     }        
   }  
   return userOrderSql_;
@@ -171,39 +171,41 @@ OptionalQString BasicTableModel::retriveQuerySql()
   {                
     if (OptionalQString selectSql = retriveSelectSql())
     {
-      QString completeQuerySql(selectSql.get());
+      QString completeQuerySql(*selectSql);
       OptionalQString internalFilterSql = retriveInternalFilterSql();
       OptionalQString userFilterSql = retriveUserFilterSql();
       OptionalQString userOrderSql = retriveUserOrderSql();
       QString fullFilterSql;
       if (internalFilterSql)
       {
-        fullFilterSql = internalFilterSql.get();
+        fullFilterSql = *internalFilterSql;
       }
       if (userFilterSql)
       {
         if (fullFilterSql.isEmpty())
         {
-          fullFilterSql = userFilterSql.get();
+          fullFilterSql = *userFilterSql;
         }
         else
         {
-          static const QString implicationSql(" and ");
-          fullFilterSql = QString("(") + fullFilterSql + QString(")") 
-            + implicationSql + QString("(") + userFilterSql.get() + QString(")");
+          static const QString implicationSql = QString::fromLatin1(" and ");
+          static const QString leftBrace = QChar('(');
+          static const QString rightBrace = QChar(')');
+          fullFilterSql = leftBrace + fullFilterSql + rightBrace
+              + implicationSql + leftBrace + userFilterSql.get() + rightBrace;
         }
-      }          
+      }
       if (!fullFilterSql.isEmpty())
       {
-        static const QString whereClause(" where ");                              
-        completeQuerySql += whereClause + fullFilterSql;          
+        static const QString whereClause = QString::fromLatin1(" where ");
+        completeQuerySql += whereClause + fullFilterSql;
       }
       if (userOrderSql)
       {
-        static const QString orderClause(" order by ");
-        completeQuerySql += orderClause + userOrderSql.get();
+        static const QString orderClause = QString::fromLatin1(" order by ");
+        completeQuerySql += orderClause + *userOrderSql;
       }
-      querySql_.reset(completeQuerySql);
+      querySql_ = completeQuerySql;
     }                
   }
   return querySql_;
@@ -216,7 +218,7 @@ boost::optional<QSqlQuery> BasicTableModel::retriveQuery()
     QSqlQuery newQuery(databaseModel_->database());        
     if (OptionalQString querySql = retriveQuerySql())
     {        
-      if (newQuery.prepare(querySql.get()))
+      if (newQuery.prepare(*querySql))
       {
         std::size_t baseParamNo = 0;
         bindInternalFilterQueryParams(newQuery, baseParamNo);
@@ -226,7 +228,8 @@ boost::optional<QSqlQuery> BasicTableModel::retriveQuery()
           typedef list_type::const_iterator iterator;
           baseParamNo += internalFilterParamCount();
           list_type filterItems = filterExpression_.items();
-          for (iterator i = filterItems.begin(), end = filterItems.end(); i != end; ++i)
+          for (iterator i = filterItems.begin(), end = filterItems.end(); 
+              i != end; ++i)
           {
             std::size_t paramCount = (*i)->paramCount();
             (*i)->bindQueryParams(newQuery, baseParamNo, *databaseModel_);
@@ -235,7 +238,7 @@ boost::optional<QSqlQuery> BasicTableModel::retriveQuery()
         }            
         if (newQuery.exec())
         {
-          query_.reset(newQuery);          
+          query_ = newQuery;
         }
       }
     }

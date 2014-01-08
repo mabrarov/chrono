@@ -3683,6 +3683,9 @@
     <ClCompile Include="GeneratedFiles\Release_static\x64\moc_usertablemodel.cpp">
       <Filter>Generated Files\Release_static_x64</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ma\chrono\orderexpression.cpp">
+      <Filter>Source Files\ma\chrono</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\..\resources\chrono.rc">

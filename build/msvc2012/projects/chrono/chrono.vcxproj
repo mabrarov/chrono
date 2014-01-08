@@ -4582,6 +4582,7 @@
     <ClCompile Include="..\..\..\..\src\ma\chrono\navigationbutton.cpp" />
     <ClCompile Include="..\..\..\..\src\ma\chrono\navigationmodel.cpp" />
     <ClCompile Include="..\..\..\..\src\ma\chrono\navigationwindow.cpp" />
+    <ClCompile Include="..\..\..\..\src\ma\chrono\orderexpression.cpp" />
     <ClCompile Include="..\..\..\..\src\ma\chrono\page.cpp" />
     <ClCompile Include="..\..\..\..\src\ma\chrono\paysheetcardpage.cpp" />
     <ClCompile Include="..\..\..\..\src\ma\chrono\paysheetlistpage.cpp" />
