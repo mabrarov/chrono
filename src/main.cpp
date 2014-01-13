@@ -3,7 +3,8 @@
 //
 
 #include <memory>
-#include <qtglobal>
+#include <exception>
+#include <qglobal.h>
 #include <QLocale>
 #include <QTranslator>
 
@@ -49,8 +50,10 @@ void installTranslation(QCoreApplication& application, const QString& path,
 
 int main(int argc, char* argv[])
 {
-  ma::chrono::ExcelExporter::ThreadInitializer excelExporterInitializer;
-  QApplication application(argc, argv);
+  try
+  {
+    ma::chrono::ExcelExporter::ThreadInitializer excelExporterInitializer;
+    QApplication application(argc, argv);
 
 #if defined(QT_STATIC) || !(defined(QT_DLL) || defined(QT_SHARED))
 
@@ -58,40 +61,50 @@ int main(int argc, char* argv[])
 #pragma warning(push)
 #pragma warning(disable: 4127)
 #endif
-  Q_INIT_RESOURCE(chrono);
+    Q_INIT_RESOURCE(chrono);
 #if defined(_MSC_VER)
 #pragma warning(pop)
 #endif
 
 #endif
 
-  QCoreApplication::setOrganizationName(
-      QString::fromWCharArray(L"Social Technologies"));
-  QCoreApplication::setApplicationName(QString::fromWCharArray(L"Chrono"));
+    QCoreApplication::setOrganizationName(
+        QString::fromLatin1("Social Technologies"));
+    QCoreApplication::setApplicationName(QString::fromLatin1("Chrono"));
 
-  QString translationPath(
-      QString::fromWCharArray(L":/ma/chrono/translation/"));
-  QString sysLocaleName(QLocale::system().name());
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromWCharArray(L"qt_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromWCharArray(L"qtbase_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromWCharArray(L"chrono_"));
+    QString translationPath(QString::fromLatin1(":/ma/chrono/translation/"));
+    QString sysLocaleName(QLocale::system().name());
+    installTranslation(application, translationPath, sysLocaleName, 
+        QString::fromLatin1("qt_"));
+    installTranslation(application, translationPath, sysLocaleName, 
+        QString::fromLatin1("qtbase_"));
+    installTranslation(application, translationPath, sysLocaleName, 
+        QString::fromLatin1("chrono_"));
 
-  ma::chrono::registerDatabaseMetaTypes();      
-  ma::chrono::NavigationWindow navigationWindow;  
+    ma::chrono::registerDatabaseMetaTypes();      
+    ma::chrono::NavigationWindow navigationWindow;  
 
-  // Resize main window and center it in screen containing main window
-  QRect screenRect = QApplication::desktop()->screenGeometry(&navigationWindow);
-  navigationWindow.resize(
-      screenRect.width() * 3 / 4, screenRect.height() * 6 / 7);
-  QSize offsetSize = (screenRect.size() - navigationWindow.frameSize()) / 2;
-  QPoint startupPos = QPoint(
-      screenRect.x() + offsetSize.width(), 
-      screenRect.y() + offsetSize.height());
-  navigationWindow.move(startupPos);
+    // Resize main window and center it in screen containing main window
+    QRect screenRect = 
+        QApplication::desktop()->screenGeometry(&navigationWindow);
+    navigationWindow.resize(
+        screenRect.width() * 3 / 4, screenRect.height() * 6 / 7);
+    QSize offsetSize = (screenRect.size() - navigationWindow.frameSize()) / 2;
+    QPoint startupPos = QPoint(
+        screenRect.x() + offsetSize.width(), 
+        screenRect.y() + offsetSize.height());
 
-  navigationWindow.show();
-  return application.exec();
+    navigationWindow.move(startupPos);
+    navigationWindow.show();
+
+    return application.exec();
+  }
+  catch (const std::exception& e)
+  {
+    qFatal("Unexpected error: %s", e.what());
+  }
+  catch (...)
+  {
+    qFatal("Unknown exception");
+  }
 }
