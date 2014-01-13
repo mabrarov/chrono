@@ -46,6 +46,39 @@ void installTranslation(QCoreApplication& application, const QString& path,
   }
 }
 
+void setApplicationDescription(QCoreApplication& /*application*/)
+{
+  QCoreApplication::setOrganizationName(
+      QString::fromLatin1("Social Technologies"));
+  QCoreApplication::setApplicationName(QString::fromLatin1("Chrono"));
+}
+
+void installSystemLocaleTranslation(QCoreApplication& application)
+{
+  QString translationPath(QString::fromLatin1(":/ma/chrono/translation/"));
+  QString sysLocaleName(QLocale::system().name());
+  installTranslation(application, translationPath, sysLocaleName, 
+      QString::fromLatin1("qt_"));
+  installTranslation(application, translationPath, sysLocaleName, 
+      QString::fromLatin1("qtbase_"));
+  installTranslation(application, translationPath, sysLocaleName, 
+      QString::fromLatin1("chrono_"));
+}
+
+void adjustDesktopAwareGeometry(QWidget& mainWindow)
+{
+  QRect screenRect = 
+      QApplication::desktop()->screenGeometry(&mainWindow);
+  mainWindow.resize(
+      screenRect.width() * 3 / 4, screenRect.height() * 6 / 7);
+  QSize offsetSize = (screenRect.size() - mainWindow.frameSize()) / 2;
+  QPoint startupPos = QPoint(
+      screenRect.x() + offsetSize.width(), 
+      screenRect.y() + offsetSize.height());
+
+  mainWindow.move(startupPos);
+}
+
 } // anonymous namespace
 
 int main(int argc, char* argv[])
@@ -68,33 +101,13 @@ int main(int argc, char* argv[])
 
 #endif
 
-    QCoreApplication::setOrganizationName(
-        QString::fromLatin1("Social Technologies"));
-    QCoreApplication::setApplicationName(QString::fromLatin1("Chrono"));
+    setApplicationDescription(application);
+    installSystemLocaleTranslation(application);
 
-    QString translationPath(QString::fromLatin1(":/ma/chrono/translation/"));
-    QString sysLocaleName(QLocale::system().name());
-    installTranslation(application, translationPath, sysLocaleName, 
-        QString::fromLatin1("qt_"));
-    installTranslation(application, translationPath, sysLocaleName, 
-        QString::fromLatin1("qtbase_"));
-    installTranslation(application, translationPath, sysLocaleName, 
-        QString::fromLatin1("chrono_"));
+    ma::chrono::registerDatabaseMetaTypes();
 
-    ma::chrono::registerDatabaseMetaTypes();      
     ma::chrono::NavigationWindow navigationWindow;  
-
-    // Resize main window and center it in screen containing main window
-    QRect screenRect = 
-        QApplication::desktop()->screenGeometry(&navigationWindow);
-    navigationWindow.resize(
-        screenRect.width() * 3 / 4, screenRect.height() * 6 / 7);
-    QSize offsetSize = (screenRect.size() - navigationWindow.frameSize()) / 2;
-    QPoint startupPos = QPoint(
-        screenRect.x() + offsetSize.width(), 
-        screenRect.y() + offsetSize.height());
-
-    navigationWindow.move(startupPos);
+    adjustDesktopAwareGeometry(navigationWindow);
     navigationWindow.show();
 
     return application.exec();

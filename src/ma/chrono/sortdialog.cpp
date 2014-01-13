@@ -63,13 +63,15 @@ void SortDialog::updateState()
     ui_.addDescBtn->setEnabled(canAdd);
   }  
   {
-    int selectedRow = ui_.orderExpressionList->currentRow();
-    bool fieldSelected = selectedRow >= 0;
-    bool hasFields = ui_.orderExpressionList->count() > 0;
+    int  selectedRow = ui_.orderExpressionList->currentRow();    
+    bool fieldSelected = selectedRow >= 0;    
+    int  rowCount = ui_.orderExpressionList->count();
+    bool hasFields = rowCount > 0;
+    bool hasFieldsToReorder = rowCount > 1;
     ui_.removeBtn->setEnabled(hasFields && fieldSelected);
-    ui_.moveUpBtn->setEnabled(hasFields && (selectedRow > 0));
-    ui_.moveDownBtn->setEnabled(hasFields && fieldSelected 
-        && (selectedRow < ui_.orderExpressionList->count() - 1));
+    ui_.moveUpBtn->setEnabled(hasFieldsToReorder && (selectedRow > 0));
+    ui_.moveDownBtn->setEnabled(hasFieldsToReorder && fieldSelected 
+        && (selectedRow < rowCount - 1));
   }
 }
 
@@ -173,10 +175,11 @@ void SortDialog::on_addAscBtn_clicked(bool /*checked*/)
   if (0 <= row)
   {
     OrderExpression::ItemPtr orderItem = 
-        boost::make_shared<OrderExpression::Item>(availableFields_.at(row),
-            OrderExpression::Item::ascendingOrder);
+        boost::make_shared<OrderExpression::Item>(
+            availableFields_.at(row), OrderExpression::Item::ascendingOrder);
     addOrderItem(orderItem);
     removeAvailableField(row);
+    updateState();
   }      
 }
 
@@ -186,21 +189,33 @@ void SortDialog::on_addDescBtn_clicked(bool /*checked*/)
   if (0 <= row)
   {
     OrderExpression::ItemPtr orderItem = 
-        boost::make_shared<OrderExpression::Item>(availableFields_.at(row),
-            OrderExpression::Item::descendingOrder);
+        boost::make_shared<OrderExpression::Item>(
+            availableFields_.at(row), OrderExpression::Item::descendingOrder);
     addOrderItem(orderItem);
-    removeAvailableField(row);        
+    removeAvailableField(row);
+    updateState();
   }
 }
 
 void SortDialog::on_moveUpBtn_clicked(bool /*checked*/)
 {
-  //todo
+  int row = ui_.orderExpressionList->currentRow();
+  if (1 <= row)
+  {
+    //todo
+    updateState();
+  }
 }
 
 void SortDialog::on_moveDownBtn_clicked(bool /*checked*/)
 {
-  //todo
+  int row = ui_.orderExpressionList->currentRow();
+  int rowCount = ui_.orderExpressionList->count();
+  if ((0 <= row) && (rowCount - 1 > row))
+  {
+    //todo
+    updateState();
+  }
 }
 
 void SortDialog::on_removeBtn_clicked(bool /*checked*/)
@@ -211,6 +226,7 @@ void SortDialog::on_removeBtn_clicked(bool /*checked*/)
     FieldDescriptionPtr field = orderExpression_.items().at(row)->field();
     removeOrderItem(row);
     addAvailableField(field);
+    updateState();
   }
 }
 
