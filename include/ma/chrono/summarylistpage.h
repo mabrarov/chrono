@@ -1,5 +1,8 @@
 //
-// Copyright (c) 2009-2010 Social Technologies (abrarov@gmail.com)
+// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+//
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
 #ifndef MA_CHRONO_SUMMARYLISTPAGE_H
@@ -7,28 +10,27 @@
 
 #include <ma/chrono/listpage.h>
 
-namespace ma
+namespace ma {
+namespace chrono {
+
+class SummaryListPage : public ListPage
 {
-  namespace chrono
-  {
-    class SummaryListPage : public ListPage
-    {
-      Q_OBJECT
+  Q_OBJECT
 
-    public:
-      explicit SummaryListPage(const boost::shared_ptr<ResourceManager>& resourceManager,
-        const boost::weak_ptr<TaskWindowManager>& taskWindowManager,
-        const boost::shared_ptr<DatabaseModel>& databaseModel,
-        const QActionSharedPtr& helpAction,
-        QWidget* parent = 0);      
-      ~SummaryListPage();
-      std::auto_ptr<ListPage> clone(QWidget* parent = 0);
+public:
+  SummaryListPage(const boost::shared_ptr<ResourceManager>& resourceManager,
+      const boost::weak_ptr<TaskWindowManager>& taskWindowManager,
+      const boost::shared_ptr<DatabaseModel>& databaseModel,
+      const QActionSharedPtr& helpAction,
+      QWidget* parent = 0);
+  ~SummaryListPage();
+  std::auto_ptr<ListPage> clone(QWidget* parent = 0);
 
-    private:
-      Q_DISABLE_COPY(SummaryListPage)                      
-    }; // class SummaryListPage
+private:
+  Q_DISABLE_COPY(SummaryListPage)                      
+}; // class SummaryListPage
 
-  } // namespace chrono
-} //namespace ma
+} // namespace chrono
+} // namespace ma
 
 #endif // MA_CHRONO_SUMMARYLISTPAGE_H

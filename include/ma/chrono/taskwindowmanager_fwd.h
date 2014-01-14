@@ -1,5 +1,8 @@
 //
-// Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+//
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
 #ifndef MA_CHRONO_TASKWINDOWMANAGER_FWD_H
@@ -20,6 +23,6 @@ typedef boost::shared_ptr<TaskWindowManager> TaskWindowManagerPtr;
 typedef boost::weak_ptr<TaskWindowManager>   TaskWindowManagerWeakPtr;
 
 } // namespace chrono
-} //namespace ma
+} // namespace ma
 
 #endif // MA_CHRONO_TASKWINDOWMANAGER_FWD_H

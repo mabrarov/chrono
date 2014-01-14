@@ -1,5 +1,8 @@
 //
-// Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+//
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
 #ifndef MA_CHRONO_CARDPAGE_H
@@ -11,7 +14,7 @@
 
 #include <memory>
 #include <boost/function.hpp>
-#include <QtGlobal>
+#include <qglobal.h>
 #include <ma/chrono/types.h>
 #include <ma/chrono/dbconstants.h>
 #include <ma/chrono/datapage.h>
@@ -193,6 +196,6 @@ private slots:
 }; // class CardPage    
 
 } // namespace chrono
-} //namespace ma
+} // namespace ma
 
 #endif // MA_CHRONO_CARDPAGE_H

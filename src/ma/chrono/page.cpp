@@ -3,7 +3,10 @@ TRANSLATOR ma::chrono::Page
 */
 
 //
-// Copyright (c) 2009-2013 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+//
+// Distributed under the Boost Software License, Version 1.0. (See accompanying
+// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
 #include <ma/chrono/page.h>
@@ -13,9 +16,9 @@ namespace ma {
 namespace chrono {
 
 Page::Page(const ResourceManagerPtr& resourceManager,
-  const TaskWindowManagerWeakPtr& taskWindowManager,
-  const QActionSharedPtr& helpAction,
-  QWidget* parent)
+    const TaskWindowManagerWeakPtr& taskWindowManager,
+    const QActionSharedPtr& helpAction,
+    QWidget* parent)
   : QWidget(parent)      
   , resourceManager_(resourceManager)
   , taskWindowManager_(taskWindowManager)
@@ -43,4 +46,4 @@ QActionSharedPtr Page::helpAction() const
 }
     
 } // namespace chrono
-} //namespace ma
+} // namespace ma
