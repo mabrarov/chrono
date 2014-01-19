@@ -1,0 +1,22 @@
+--- qtbase/src/widgets/widgets/qtoolbutton.cpp	Вс дек  8 19:09:48 2013
++++ qtbase/src/widgets/widgets/qtoolbutton.cpp	Вс янв 19 12:41:39 2014
+@@ -778,11 +778,15 @@
+     actualMenu->d_func()->causedPopup.action = defaultAction;
+     actionsCopy = q->actions(); //(the list of action may be modified in slots)
+     actualMenu->exec(p);
+-    QObject::disconnect(actualMenu, SIGNAL(aboutToHide()), q, SLOT(_q_updateButtonDown()));
+-    if (mustDeleteActualMenu)
++    const bool canDisconnectMenuSignalsFromThis = actualMenu && that;
++    if (canDisconnectMenuSignalsFromThis) {
++        QObject::disconnect(actualMenu, SIGNAL(aboutToHide()), that, SLOT(_q_updateButtonDown()));
++    }
++    if (mustDeleteActualMenu) {
+         delete actualMenu;
+-    else
+-        QObject::disconnect(actualMenu, SIGNAL(triggered(QAction*)), q, SLOT(_q_menuTriggered(QAction*)));
++    } else if (canDisconnectMenuSignalsFromThis) {
++        QObject::disconnect(actualMenu, SIGNAL(triggered(QAction*)), that, SLOT(_q_menuTriggered(QAction*)));
++    }
+ 
+     if (!that)
+         return;
