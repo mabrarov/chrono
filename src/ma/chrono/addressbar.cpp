@@ -9,6 +9,7 @@ TRANSLATOR ma::chrono::AddressBar
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
+#include <utility>
 #include <QSize>
 #include <QPainter>
 #include <QLinearGradient>
@@ -35,8 +36,8 @@ AddressBar::AddressBar(QWidget* parent)
   int verMargin = 4 * logicalDpiY() / defaultDpiY;            
   setContentsMargins(horMargin, verMargin, horMargin, verMargin);        
       
-  int horSpacing = 2 * logicalDpiX() / defaultDpiX;      
-  QSize iconSize(20 * logicalDpiX() / defaultDpiX, 
+  const int horSpacing = 2 * logicalDpiX() / defaultDpiX;      
+  const QSize iconSize(20 * logicalDpiX() / defaultDpiX, 
       20 * logicalDpiY() / defaultDpiY);
 
   QHBoxLayout* layout = new QHBoxLayout(this);
@@ -58,7 +59,12 @@ AddressBar::AddressBar(QWidget* parent)
   refreshButton_->setToolButtonStyle(Qt::ToolButtonIconOnly);
   refreshButton_->setAutoRaise(true);            
 
-  addressBreadCrumbBar_ = new BreadCrumbBar(this);
+  addressBreadCrumbBar_ = new BreadCrumbBar(this);  
+  const int addressBreadCrumbBarRecommenedHeight = 
+      24 * logicalDpiY() / defaultDpiY;
+  addressBreadCrumbBar_->setMinimumHeight((std::max)(
+      addressBreadCrumbBar_->minimumHeight(), 
+      addressBreadCrumbBarRecommenedHeight));
   //QStyleOption styleOption;
   //styleOption.initFrom(addressEdit_);      
   //int editIconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, 

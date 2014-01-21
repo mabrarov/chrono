@@ -30,7 +30,7 @@ class NavigationButton : public QToolButton
 
 public:
   explicit NavigationButton(QWidget* parent = 0);
-  ~NavigationButton();      
+  ~NavigationButton();
 
 protected:
   void paintEvent(QPaintEvent* event);

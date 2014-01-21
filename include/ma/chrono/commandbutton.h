@@ -34,7 +34,7 @@ public slots:
 public:
   explicit CommandButton(QWidget* parent = 0);
   ~CommandButton();
-  QSize minimumSizeHint() const;      
+  QSize minimumSizeHint() const;
     
 protected:
   void paintEvent(QPaintEvent* event);
@@ -47,9 +47,7 @@ private:
   void drawHotCheckedBackground(QStyleOption& option, QPainter& painter) const;
   void drawDisabledBackground(QStyleOption& option, QPainter& painter) const;
   void drawCheckedBackground(QStyleOption& option, QPainter& painter) const;
-  void drawNormalBackground(QStyleOption& option, QPainter& painter) const;      
-
-  static const int additionalWidth = 10;
+  void drawNormalBackground(QStyleOption& option, QPainter& painter) const;
 }; // class CommandButton
 
 } // namespace chrono
