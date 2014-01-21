@@ -179,8 +179,8 @@ void CommandButton::drawPressedBackground(
   //    QStyle::PE_PanelButtonTool, &buttonOption, &painter, this);
   painter.save();
 
-  const int horMargin = 2 * logicalDpiX() / defaultDpiX;
-  const int verMargin = 2 * logicalDpiX() / defaultDpiX;
+  const int horMargin = 1 * logicalDpiX() / defaultDpiX;
+  const int verMargin = 2 * logicalDpiY() / defaultDpiY;
   
   const QRect visibleRect = buttonOption.rect.adjusted(
       horMargin, verMargin, -horMargin, -verMargin);
@@ -219,8 +219,8 @@ void CommandButton::drawHotBackground(
   //    QStyle::PE_PanelButtonTool, &buttonOption, &painter, this);
   painter.save();
 
-  const int horMargin = 2 * logicalDpiX() / defaultDpiX;
-  const int verMargin = 2 * logicalDpiX() / defaultDpiX;
+  const int horMargin = 1 * logicalDpiX() / defaultDpiX;
+  const int verMargin = 2 * logicalDpiY() / defaultDpiY;
 
   const int penWidth = 1 * logicalDpiX() / defaultDpiX;
   const QRect visibleRect = buttonOption.rect.adjusted(

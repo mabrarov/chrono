@@ -140,8 +140,8 @@ void NavigationButton::drawPressedBackground(
   //style()->drawPrimitive(QStyle::PE_PanelButtonTool, &option, &painter, this);
   painter.save();
 
-  const int horMargin = 2 * logicalDpiX() / defaultDpiX;
-  const int verMargin = 2 * logicalDpiX() / defaultDpiX;
+  const int horMargin = 1 * logicalDpiX() / defaultDpiX;
+  const int verMargin = 1 * logicalDpiY() / defaultDpiY;
     
   QRect visibleRect = option.rect.adjusted(
       horMargin, verMargin, -horMargin, -verMargin);  
@@ -174,14 +174,15 @@ void NavigationButton::drawPressedBackground(
   painter.restore();
 } // NavigationButton::drawPressedBackground
 
-void NavigationButton::drawHotBackground(QStyleOption& option, QPainter& painter) const
+void NavigationButton::drawHotBackground(
+    QStyleOption& option, QPainter& painter) const
 {
   //todo
   //style()->drawPrimitive(QStyle::PE_PanelButtonTool, &option, &painter, this);
   painter.save();      
 
-  const int horMargin = 2 * logicalDpiX() / defaultDpiX;
-  const int verMargin = 2 * logicalDpiX() / defaultDpiX;
+  const int horMargin = 1 * logicalDpiX() / defaultDpiX;
+  const int verMargin = 1 * logicalDpiY() / defaultDpiY;
   
   QRect visibleRect = option.rect.adjusted(
       horMargin, verMargin, -horMargin, -verMargin);  
