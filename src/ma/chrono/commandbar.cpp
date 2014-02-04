@@ -109,7 +109,8 @@ void CommandBar::addCommand(QBoxLayout* layout, QAction* action, bool showText)
   {
     button->setToolButtonStyle(Qt::ToolButtonIconOnly);
   }
-  QObject::connect(action, SIGNAL(changed()), button.get(), SLOT(updateState()));
+  QObject::connect(action, SIGNAL(changed()), 
+      button.get(), SLOT(updateState()));
   layout->addWidget(button.release());      
 }
     
@@ -118,15 +119,14 @@ QWidget* CommandBar::updateTabOrder(QLayout* layout, QWidget* first)
   int itemCount = layout->count();
   for (int i = 0; i != itemCount; ++i)
   {
-    QWidget* widget = layout->itemAt(i)->widget();
-    if (widget)
+    if (QWidget* widget = layout->itemAt(i)->widget())
     {
       if (first)
       {
         QWidget::setTabOrder(first, widget);
       }
       first = widget;
-    }        
+    }
   }
   return first;
 }
@@ -144,13 +144,15 @@ void CommandBar::addCommand(QAction* action, CommandArea area, bool showText)
   updateTabOrder();
 }
 
-void CommandBar::addCommands(const QActionList& actions, CommandArea area, bool showText)
+void CommandBar::addCommands(
+    const QActionList& actions, CommandArea area, bool showText)
 {
   typedef QActionList action_list;
   typedef action_list::const_iterator action_iterator;
 
   QBoxLayout* layout = main == area ? mainLayout_ : trayLayout_;
-  for (action_iterator it = actions.begin(), end = actions.end(); it != end; ++it)      
+  for (action_iterator it = actions.begin(), end = actions.end(); 
+      it != end; ++it)
   {
     addCommand(layout, *it, showText);        
   }
@@ -182,7 +184,8 @@ void CommandBar::removeCommands(const QActionList& actions)
   typedef QActionList action_list;
   typedef action_list::const_iterator action_iterator;
       
-  for (action_iterator it = actions.begin(), end = actions.end(); it != end; ++it)      
+  for (action_iterator it = actions.begin(), end = actions.end(); 
+      it != end; ++it)
   {
     removeCommands(mainLayout_, *it);
     removeCommands(trayLayout_, *it);
@@ -212,11 +215,9 @@ CommandButton* CommandBar::hasCommand(QLayout* layout, QAction* action)
   int itemCount = layout->count();
   for (int i = 0; i != itemCount; ++i)
   {
-    QWidget* widget = layout->itemAt(i)->widget();
-    if (widget)
+    if (QWidget* widget = layout->itemAt(i)->widget())
     {
-      CommandButton* button = qobject_cast<CommandButton*>(widget);
-      if (button)
+      if (CommandButton* button = qobject_cast<CommandButton*>(widget))
       {
         if (button->defaultAction() == action)
         {
@@ -230,27 +231,22 @@ CommandButton* CommandBar::hasCommand(QLayout* layout, QAction* action)
 
 void CommandBar::removeCommands(QLayout* layout, QAction* action)
 {      
-  for (int i = 0; i != layout->count(); )
+  for (int i = 0; i < layout->count(); )
   {
-    bool deleted = false;
-    QWidget* widget = layout->itemAt(i)->widget();
-    if (widget)
+    if (QWidget* widget = layout->itemAt(i)->widget())
     {
-      CommandButton* button = qobject_cast<CommandButton*>(widget);
-      if (button)
+      if (CommandButton* button = qobject_cast<CommandButton*>(widget))
       {
         if (button->defaultAction() == action)
         {
           layout->removeWidget(button);
-          deleted = true;
-          delete button;
+          button->hide();
+          button->deleteLater();
+          continue;
         }            
       }
-    }
-    if (!deleted)
-    {
-      ++i;
-    }
+    }    
+    ++i;
   } 
   updateTabOrder(layout);
 }
@@ -261,11 +257,9 @@ QWidget* CommandBar::findFocusProxy(QLayout* layout)
   int itemCount = layout->count();
   for (int i = 0; i != itemCount; ++i)
   {
-    QWidget* widget = layout->itemAt(i)->widget();
-    if (widget)
+    if (QWidget* widget = layout->itemAt(i)->widget())
     {
-      CommandButton* button = qobject_cast<CommandButton*>(widget);
-      if (button)
+      if (CommandButton* button = qobject_cast<CommandButton*>(widget))
       {
         return button;
       }
@@ -293,22 +287,26 @@ void CommandBar::paintEvent(QPaintEvent* /*event*/)
   painter.fillRect(topRect, topFade);      
 
   int realBorderWidth  = borderWidth * logicalDpiX() / defaultDpiX;      
-  int realBorderHeight = borderHeight * logicalDpiY() / defaultDpiY; 
+  int realBorderHeight = borderHeight * logicalDpiY() / defaultDpiY;
 
-  QRect bottomRect(0, topHeight, width(), height() - realBorderHeight - topHeight);
+  QRect bottomRect(0, topHeight, 
+      width(), height() - realBorderHeight - topHeight);
   QLinearGradient bottomFade(0, bottomRect.top(), 0, bottomRect.bottom());
   bottomFade.setColorAt(0, QColor(77, 102, 165));
   bottomFade.setColorAt(1, QColor(106, 130, 194));
   painter.fillRect(bottomRect, bottomFade);
       
-  QRect topBorderRect(realBorderWidth, 0, width() - 2 * realBorderWidth, realBorderHeight);      
+  QRect topBorderRect(realBorderWidth, 0, 
+      width() - 2 * realBorderWidth, realBorderHeight);      
   painter.fillRect(topBorderRect, QColor(113, 129, 170));
 
-  QRect bottomBorderRect(0, height() - realBorderHeight, width(), realBorderHeight);
+  QRect bottomBorderRect(0, height() - realBorderHeight, 
+      width(), realBorderHeight);
   painter.fillRect(bottomBorderRect, QColor(86, 108, 158));
 
-  QRect bottomBorderRect2(realBorderWidth, height() - 2 * realBorderHeight, width() - 2 * realBorderWidth, realBorderHeight);      
-  painter.fillRect(bottomBorderRect2, QColor(141, 160, 210));      
+  QRect bottomBorderRect2(realBorderWidth, height() - 2 * realBorderHeight,
+      width() - 2 * realBorderWidth, realBorderHeight);      
+  painter.fillRect(bottomBorderRect2, QColor(141, 160, 210));
 }    
 
 } // namespace chrono
