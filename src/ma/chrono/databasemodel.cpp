@@ -463,8 +463,7 @@ QSqlDatabase DatabaseModel::database() const
 OptionalQInt64 DatabaseModel::generateId(Entity entity) const
 {
   OptionalQInt64 id;
-  boost::shared_ptr<Generator> generator = generators_.value(entity);
-  if (generator)
+  if (boost::shared_ptr<Generator> generator = generators_.value(entity))
   {
     try 
     {
