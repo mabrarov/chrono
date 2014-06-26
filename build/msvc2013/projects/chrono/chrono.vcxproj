@@ -11665,7 +11665,7 @@ xcopy /Y /E "$(QTDIR)\plugins\sqldrivers\qsqlibased.dll" "$(OutDir)\sqldrivers"
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\x86;..\..\..\..\..\icu4c_52_1_msvc2012_static\lib;..\..\..\..\..\boost_1_55_0\lib\x86;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\x86;..\..\..\..\..\icu4c_53_1_msvc2013\lib64;..\..\..\..\..\boost_1_55_0\lib\x86;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Sqld.lib;Qt5Svgd.lib;Qt5Widgetsd.lib;Qt5PlatformSupportd.lib;qwindowsd.lib;qsvgd.lib;qsvgicond.lib;qsqlibased.lib;sicuind.lib;sicuucd.lib;sicudtd.lib;opengl32.lib;imm32.lib;winmm.lib;ws2_32.lib;fbclient_ms.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -11727,7 +11727,7 @@ xcopy /Y /E "$(QTDIR)\plugins\sqldrivers\qsqlibased.dll" "$(OutDir)\sqldrivers"
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\amd64;..\..\..\..\..\icu4c_52_1_msvc2012_static\lib64;..\..\..\..\..\boost_1_55_0\lib\amd64;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\amd64;..\..\..\..\..\icu4c_53_1_msvc2013\lib64;..\..\..\..\..\boost_1_55_0\lib\amd64;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Sqld.lib;Qt5Svgd.lib;Qt5Widgetsd.lib;Qt5PlatformSupportd.lib;qwindowsd.lib;qsvgd.lib;qsvgicond.lib;qsqlibased.lib;sicuind.lib;sicuucd.lib;sicudtd.lib;opengl32.lib;imm32.lib;winmm.lib;ws2_32.lib;fbclient_ms.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -11787,7 +11787,7 @@ xcopy /Y /E "$(QTDIR)\plugins\sqldrivers\qsqlibase.dll" "$(OutDir)\sqldrivers"
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\x86;..\..\..\..\..\icu4c_52_1_msvc2012_static\lib;..\..\..\..\..\boost_1_55_0\lib\x86;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\x86;..\..\..\..\..\icu4c_53_1_msvc2013\lib;..\..\..\..\..\boost_1_55_0\lib\x86;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Widgets.lib;Qt5PlatformSupport.lib;qwindows.lib;qsvg.lib;qsvgicon.lib;qsqlibase.lib;sicuin.lib;sicuuc.lib;sicudt.lib;opengl32.lib;imm32.lib;winmm.lib;ws2_32.lib;fbclient_ms.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -11848,7 +11848,7 @@ xcopy /Y /E "$(QTDIR)\plugins\sqldrivers\qsqlibase.dll" "$(OutDir)\sqldrivers"
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\amd64;..\..\..\..\..\icu4c_52_1_msvc2012_static\lib64;..\..\..\..\..\boost_1_55_0\lib\amd64;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\build\lib\firebird\amd64;..\..\..\..\..\icu4c_53_1_msvc2013\lib64;..\..\..\..\..\boost_1_55_0\lib\amd64;$(QTDIR)\lib;$(QTDIR)\plugins\platforms;$(QTDIR)\plugins\imageformats;$(QTDIR)\plugins\iconengines;$(QTDIR)\plugins\sqldrivers;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Widgets.lib;Qt5PlatformSupport.lib;qwindows.lib;qsvg.lib;qsvgicon.lib;qsqlibase.lib;sicuin.lib;sicuuc.lib;sicudt.lib;opengl32.lib;imm32.lib;winmm.lib;ws2_32.lib;fbclient_ms.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -11863,7 +11863,7 @@ xcopy /Y /E ".\..\..\..\..\src\db\CHRONO_DB.FDB" "$(OutDir)"</Command>
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)\$(PlatformName)" UicDir=".\GeneratedFiles\$(PlatformName)" RccDir=".\GeneratedFiles\$(PlatformName)" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="5.2.1 shared" Qt5Version_x0020_x64="5.2.1 shared x64" MocOptions="" />
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)\$(PlatformName)" UicDir=".\GeneratedFiles\$(PlatformName)" RccDir=".\GeneratedFiles\$(PlatformName)" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="5.2.1 shared" Qt5Version_x0020_x64="5.3.1 shared x64" MocOptions="" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
