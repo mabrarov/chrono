@@ -500,7 +500,7 @@ namespace ma
           ui_.createUserEdit->setText(QString());
           ui_.createUserEdit->setEnabled(false);
         }
-        ui_.createUserBtn->setEnabled(entityData_.createUserId);
+        ui_.createUserBtn->setEnabled(static_cast<bool>(entityData_.createUserId));
         if (updateUserName_)
         {
           ui_.updateUserEdit->setText(updateUserName_.get());
@@ -511,7 +511,7 @@ namespace ma
           ui_.updateUserEdit->setText(QString());
           ui_.updateUserEdit->setEnabled(false);
         }
-        ui_.updateUserBtn->setEnabled(entityData_.updateUserId);
+        ui_.updateUserBtn->setEnabled(static_cast<bool>(entityData_.updateUserId));
         populateExportData();
         contentsChanged_ = false;
       }

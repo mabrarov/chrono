@@ -377,7 +377,7 @@ namespace ma
         peristance && bolTabIndex == currentTabIndex && contractBolListPage_->selectedId());            
 
       ui_.closedCheckBox->setEnabled(peristance && !readOnly);
-      ui_.closeUserBtn->setEnabled(entityData_.closeUserId);      
+      ui_.closeUserBtn->setEnabled(static_cast<bool>(entityData_.closeUserId));
 
       switch (currentMode)
       {

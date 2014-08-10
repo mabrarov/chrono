@@ -102,7 +102,7 @@ void ConditionDialog::updateState()
       valueDefined = true;
       break;
     case entityPageIndex:
-      valueDefined = selectedEntityId_;
+      valueDefined = static_cast<bool>(selectedEntityId_);
       break;
     case datePageIndex:
       valueDefined = true;
