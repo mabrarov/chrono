@@ -27,7 +27,7 @@ namespace {
 
 const char* translationContext = "ma::chrono::BinaryFilterCondition";
 
-}
+} // anonymous namespace
 
 BinaryFilterCondition::BinaryFilterCondition(const FieldDescriptionPtr& field, 
     ConditionType conditionType, const QString& rightValueText, 

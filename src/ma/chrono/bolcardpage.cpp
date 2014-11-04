@@ -251,10 +251,12 @@ void BolCardPage::updateWidgets()
     {
       widget->setEnabled(!readOnly);
     } 
-  }      
+  }
+
   bool peristance = createMode != currentMode && entityId();      
   int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      
   ui_.tabWidget->setTabEnabled(generalTabIndex, peristance);            
+
   switch (currentMode)
   {
   case viewMode:

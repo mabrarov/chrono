@@ -67,7 +67,6 @@ AutoenterpriseCardPage::AutoenterpriseCardPage(
   updateWidgets();
 }
 
-
 AutoenterpriseCardPage::~AutoenterpriseCardPage()
 {
 }

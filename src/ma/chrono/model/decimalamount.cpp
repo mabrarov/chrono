@@ -66,7 +66,8 @@ double DecimalAmount::toDouble() const
 
 bool DecimalAmount::setValue(const QString& text)
 {
-  const QString delimiters(QString::fromWCharArray(L".,-=/><сўСо?"));
+  static const QString delimiters =
+      QString::fromWCharArray(L".,-=/><\x0431\x044E\x0411\x042E?");
   int decimalPointIndex = -1;
   for (QString::const_iterator i = delimiters.begin(), e = delimiters.end();
       i != e; ++i)
