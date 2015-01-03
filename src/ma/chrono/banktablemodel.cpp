@@ -98,7 +98,7 @@ const Entity selectedFieldEntitySubTypes[selectedFieldCount] =
   unknownEntity
 };
 
-} // namespace 
+} // anonymous namespace
 
 BankTableModel::BankTableModel(const DatabaseModelPtr& databaseModel, 
     QObject* parent, 

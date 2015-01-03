@@ -65,16 +65,6 @@ AddressBar::AddressBar(QWidget* parent)
   addressBreadCrumbBar_->setMinimumHeight((std::max)(
       addressBreadCrumbBar_->minimumHeight(), 
       addressBreadCrumbBarRecommenedHeight));
-  //QStyleOption styleOption;
-  //styleOption.initFrom(addressEdit_);      
-  //int editIconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, 
-  //    &styleOption, addressEdit_);
-  //int editIconHorMargin = 3 * logicalDpiX() / defaultDpiX;
-  //int editIconVerMargin = 3 * logicalDpiY() / defaultDpiY;
-  //addressEdit_->setMinimumSize(
-  //    editIconSize + editIconHorMargin + editIconHorMargin 
-  //        + 100 * logicalDpiX() / defaultDpiX, 
-  //    editIconSize + editIconVerMargin + editIconVerMargin);
 
   layout->addWidget(backButton_);
   layout->addWidget(forwardButton_);
