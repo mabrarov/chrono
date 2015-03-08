@@ -13,8 +13,9 @@ find_package(Boost REQUIRED)
 
 # Build list of used Boost libraries depending on Boost version 
 # (use chono and timer if available)
-set(BOOST_COMPONENTS "date_time")
+set(BOOST_COMPONENTS "system;thread;date_time")
 if(NOT(${Boost_VERSION} LESS 104700))
+    set(BOOST_COMPONENTS "${BOOST_COMPONENTS};chrono")
     set(BOOST_HAS_CHRONO TRUE)
 else()
     set(BOOST_HAS_CHRONO FALSE)
@@ -44,6 +45,8 @@ if(CHRONO_USE_QT5)
     find_package(Qt5Core    REQUIRED)
     find_package(Qt5Sql     REQUIRED)
     find_package(Qt5Svg     REQUIRED)
+    find_package(Qt5LinguistTools QUIET)
+    
     set(CHRONO_QT_LIBRARIES "Qt5::Core;Qt5::Gui;Qt5::Widgets;Qt5::Sql;Qt5::Svg")
 else()
     find_package(Qt4 REQUIRED QtCore QtGui QtSvg QtSql)
@@ -122,6 +125,7 @@ set(MOC_HEADERS
     "${HEADERS_DIR}/ma/chrono/lcreditlistpage.h"
     "${HEADERS_DIR}/ma/chrono/lcredittablemodel.h"
     "${HEADERS_DIR}/ma/chrono/listpage.h"
+    "${HEADERS_DIR}/ma/chrono/listselectdialog.h"
     "${HEADERS_DIR}/ma/chrono/listtaskwindow.h"
     "${HEADERS_DIR}/ma/chrono/navigationbutton.h"
     "${HEADERS_DIR}/ma/chrono/navigationmodel.h"
@@ -138,7 +142,6 @@ set(MOC_HEADERS
     "${HEADERS_DIR}/ma/chrono/sbollistpage.h"
     "${HEADERS_DIR}/ma/chrono/sboltablemodel.h"
     "${HEADERS_DIR}/ma/chrono/sortdialog.h"
-    "${HEADERS_DIR}/ma/chrono/summarylistpage.h"
     "${HEADERS_DIR}/ma/chrono/summarypage.h"
     "${HEADERS_DIR}/ma/chrono/taskwindow.h"
     "${HEADERS_DIR}/ma/chrono/taskwindowmanager.h"
@@ -176,6 +179,9 @@ set(UIC_FORMS
 
 set(RCC_RESOURCES
     "${RESOURCES_DIR}/chrono.qrc")
+
+set(TS_RESOURCES
+    "${RESOURCES_DIR}/ma/chrono/translation/chrono_ru.ts")
 
 set(HEADERS
     "${HEADERS_DIR}/ma/chrono/actionutility.h"    
@@ -227,7 +233,6 @@ set(HEADERS
     "${HEADERS_DIR}/ma/chrono/insurancetablemodel_fwd.h"
     "${HEADERS_DIR}/ma/chrono/lcredittablemodel_fwd.h"
     "${HEADERS_DIR}/ma/chrono/listpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/listselectdialog.h"
     "${HEADERS_DIR}/ma/chrono/listtaskwindow_fwd.h"
     "${HEADERS_DIR}/ma/chrono/localeutility.h"
     "${HEADERS_DIR}/ma/chrono/modelutility.h"
@@ -296,7 +301,7 @@ set(HEADERS
     "${HEADERS_DIR}/ma/chrono/model/user_fwd.h"
     ${MOC_HEADERS})
 
-set(SOURCES
+set(MULTITHREAD_COMPILE_COMPAT_SOURCES
     "${SOURCES_DIR}/main.cpp"
     "${SOURCES_DIR}/ma/chrono/actionutility.cpp"
     "${SOURCES_DIR}/ma/chrono/addressbar.cpp"
@@ -356,7 +361,6 @@ set(SOURCES
     "${SOURCES_DIR}/ma/chrono/deppointcardpage.cpp"
     "${SOURCES_DIR}/ma/chrono/deppointlistpage.cpp"
     "${SOURCES_DIR}/ma/chrono/deppointtablemodel.cpp"
-    "${SOURCES_DIR}/ma/chrono/excelexporter.cpp"
     "${SOURCES_DIR}/ma/chrono/filterdialog.cpp"
     "${SOURCES_DIR}/ma/chrono/generator.cpp"
     "${SOURCES_DIR}/ma/chrono/icdoccardpage.cpp"
@@ -393,7 +397,6 @@ set(SOURCES
     "${SOURCES_DIR}/ma/chrono/sbollistpage.cpp"
     "${SOURCES_DIR}/ma/chrono/sboltablemodel.cpp"
     "${SOURCES_DIR}/ma/chrono/sortdialog.cpp"
-    "${SOURCES_DIR}/ma/chrono/summarylistpage.cpp"
     "${SOURCES_DIR}/ma/chrono/summarypage.cpp"
     "${SOURCES_DIR}/ma/chrono/taskwindow.cpp"
     "${SOURCES_DIR}/ma/chrono/taskwindowmanager.cpp"
@@ -407,6 +410,11 @@ set(SOURCES
     "${SOURCES_DIR}/ma/chrono/widgetutility.cpp"
     "${SOURCES_DIR}/ma/chrono/model/decimalamount.cpp"
     ${UIC_FORMS})
+
+# Some source files doesn't support multithreaded compilation 
+list(APPEND SOURCES
+    ${MULTITHREAD_COMPILE_COMPAT_SOURCES}    
+    "${SOURCES_DIR}/ma/chrono/excelexporter.cpp")
 
 # Windows specific source files
 if(WIN32)
@@ -482,15 +490,32 @@ if(CHRONO_USE_QT5)
     qt5_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt5_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
     qt5_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
+
+    set(QM_FILES )
+    if(Qt5::LinguistTools_FOUND)
+        qt5_add_translation(QM_FILES ${TS_RESOURCES})
+    endif()
 else()
     qt4_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt4_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
     qt4_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
 endif()
 
+# Turn on parallel compilation of source files for MSVC.
+# This otion speeds up overall build time
+if(MSVC)
+    if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "18"))
+        set_source_files_properties(
+            ${MULTITHREAD_COMPILE_COMPAT_SOURCES}
+            ${MOC_GENERATED_SOURCES}
+            ${RCC_GENERATED_SOURCES} 
+            PROPERTIES COMPILE_FLAGS /MP)
+    endif()
+endif()
+
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${HEADERS_DIR})
 add_executable(chrono WIN32 
-    ${HEADERS} ${SOURCES} 
-    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS})
+    ${HEADERS} ${SOURCES}
+    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${QM_FILES})
 target_link_libraries(chrono ${LIBRARIES})
