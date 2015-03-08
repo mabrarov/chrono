@@ -40,12 +40,12 @@ endif()
 
 # Find required Qt libraries
 if(CHRONO_USE_QT5)
-    find_package(Qt5Widgets REQUIRED)
-    find_package(Qt5Gui     REQUIRED)
-    find_package(Qt5Core    REQUIRED)
-    find_package(Qt5Sql     REQUIRED)
-    find_package(Qt5Svg     REQUIRED)
-    find_package(Qt5LinguistTools QUIET)
+    find_package(Qt5Widgets       REQUIRED)
+    find_package(Qt5Gui           REQUIRED)
+    find_package(Qt5Core          REQUIRED)
+    find_package(Qt5Sql           REQUIRED)
+    find_package(Qt5Svg           REQUIRED)
+    find_package(Qt5LinguistTools REQUIRED)
     
     set(CHRONO_QT_LIBRARIES "Qt5::Core;Qt5::Gui;Qt5::Widgets;Qt5::Sql;Qt5::Svg")
 else()
@@ -181,7 +181,7 @@ set(RCC_RESOURCES
     "${RESOURCES_DIR}/chrono.qrc")
 
 set(TS_RESOURCES
-    "${RESOURCES_DIR}/ma/chrono/translation/chrono_ru.ts")
+    "${RESOURCES_DIR}/chrono_ru.ts")
 
 set(HEADERS
     "${HEADERS_DIR}/ma/chrono/actionutility.h"    
@@ -301,7 +301,7 @@ set(HEADERS
     "${HEADERS_DIR}/ma/chrono/model/user_fwd.h"
     ${MOC_HEADERS})
 
-set(MULTITHREAD_COMPILE_COMPAT_SOURCES
+set(MP_COMPAT_SOURCES
     "${SOURCES_DIR}/main.cpp"
     "${SOURCES_DIR}/ma/chrono/actionutility.cpp"
     "${SOURCES_DIR}/ma/chrono/addressbar.cpp"
@@ -408,18 +408,15 @@ set(MULTITHREAD_COMPILE_COMPAT_SOURCES
     "${SOURCES_DIR}/ma/chrono/userlistpage.cpp"
     "${SOURCES_DIR}/ma/chrono/usertablemodel.cpp"
     "${SOURCES_DIR}/ma/chrono/widgetutility.cpp"
-    "${SOURCES_DIR}/ma/chrono/model/decimalamount.cpp"
-    ${UIC_FORMS})
+    "${SOURCES_DIR}/ma/chrono/model/decimalamount.cpp")
 
 # Some source files doesn't support multithreaded compilation 
-list(APPEND SOURCES
-    ${MULTITHREAD_COMPILE_COMPAT_SOURCES}    
+list(APPEND SOURCES ${MP_COMPAT_SOURCES} ${UIC_FORMS}
     "${SOURCES_DIR}/ma/chrono/excelexporter.cpp")
 
 # Windows specific source files
 if(WIN32)
-    list(APPEND SOURCES
-        "${RESOURCES_DIR}/chrono.rc")
+    list(APPEND SOURCES "${RESOURCES_DIR}/chrono.rc")
 endif()
 
 set(LIBRARIES "${Boost_LIBRARIES};${CHRONO_QT_LIBRARIES}")
@@ -490,11 +487,7 @@ if(CHRONO_USE_QT5)
     qt5_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt5_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
     qt5_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
-
-    set(QM_FILES )
-    if(Qt5::LinguistTools_FOUND)
-        qt5_add_translation(QM_FILES ${TS_RESOURCES})
-    endif()
+    qt5_add_translation(QM_FILES ${TS_RESOURCES})
 else()
     qt4_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt4_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
@@ -504,9 +497,9 @@ endif()
 # Turn on parallel compilation of source files for MSVC.
 # This otion speeds up overall build time
 if(MSVC)
-    if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "18"))
+    if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16"))
         set_source_files_properties(
-            ${MULTITHREAD_COMPILE_COMPAT_SOURCES}
+            ${MP_COMPAT_SOURCES}
             ${MOC_GENERATED_SOURCES}
             ${RCC_GENERATED_SOURCES} 
             PROPERTIES COMPILE_FLAGS /MP)
@@ -517,5 +510,6 @@ include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${HEADERS_DIR})
 add_executable(chrono WIN32 
     ${HEADERS} ${SOURCES}
-    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${QM_FILES})
+    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS}
+    ${TS_RESOURCES} ${QM_FILES})
 target_link_libraries(chrono ${LIBRARIES})

@@ -28,15 +28,6 @@
       <Extensions>ts</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Translation Files\ma">
-      <UniqueIdentifier>{f022cf81-b3b2-48eb-88c5-60e65348a5ce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Translation Files\ma\chrono">
-      <UniqueIdentifier>{2a7a80a1-591e-4557-b130-249fb789052e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Translation Files\ma\chrono\translation">
-      <UniqueIdentifier>{520b3df6-d15d-4851-be48-e9223dd1c033}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Form Files\ma">
       <UniqueIdentifier>{b07dfe87-3391-4a34-80a8-7937d5beafce}</UniqueIdentifier>
     </Filter>
@@ -60,9 +51,6 @@
     </Filter>
     <Filter Include="Resource Files\ma\chrono\images">
       <UniqueIdentifier>{a65e3b73-1cbd-4167-a81b-1f80b4cf7d1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\ma\chrono\translation">
-      <UniqueIdentifier>{4ddf2d70-25ba-4893-9628-b0baeb4f07c1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\ma">
       <UniqueIdentifier>{456f46ee-6fbc-48e5-925b-78d2cbdb9562}</UniqueIdentifier>
@@ -113,9 +101,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\resources\ma\chrono\translation\chrono_ru.ts">
-      <Filter>Translation Files\ma\chrono\translation</Filter>
-    </None>
     <None Include="..\..\..\..\resources\ma\chrono\images\kbugbuster.svg">
       <Filter>Resource Files\ma\chrono\images</Filter>
     </None>
@@ -245,14 +230,11 @@
     <None Include="..\..\..\..\resources\ma\chrono\images\window-duplicate.svgz">
       <Filter>Resource Files\ma\chrono\images</Filter>
     </None>
-    <None Include="..\..\..\..\resources\ma\chrono\translation\chrono_ru.qm">
-      <Filter>Resource Files\ma\chrono\translation</Filter>
+    <None Include="..\..\..\..\resources\chrono_ru.ts">
+      <Filter>Translation Files</Filter>
     </None>
-    <None Include="..\..\..\..\resources\ma\chrono\translation\qt_ru.qm">
-      <Filter>Resource Files\ma\chrono\translation</Filter>
-    </None>
-    <None Include="..\..\..\..\resources\ma\chrono\translation\qtbase_ru.qm">
-      <Filter>Resource Files\ma\chrono\translation</Filter>
+    <None Include="..\..\..\..\resources\chrono_ru.qm">
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,7 @@
 
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QProcessEnvironment>
 #include <ma/chrono/databasemodel_fwd.h>
 #include <ma/chrono/navigationwindow.h>
 #include <ma/chrono/excelexporter.h>
@@ -38,6 +39,10 @@ Q_IMPORT_PLUGIN(qsqlibase)
 
 namespace {
 
+static const QString qtTranslation = QString::fromLatin1("qt_");
+static const QString qtBaseTranslation = QString::fromLatin1("qtbase_");
+static const QString chronoTranslation = QString::fromLatin1("chrono_");
+
 void installTranslation(QCoreApplication& application, const QString& path,
     const QString& localeName, const QString& baseFilename)
 {
@@ -56,16 +61,35 @@ void setApplicationDescription(QCoreApplication& /*application*/)
   QCoreApplication::setApplicationName(QString::fromLatin1("Chrono"));
 }
 
+void installTranslations(QCoreApplication& application, 
+    const QString& path, const QString& localeName)
+{
+  installTranslation(application, path, localeName, qtTranslation);
+  installTranslation(application, path, localeName, qtBaseTranslation);
+  installTranslation(application, path, localeName, chronoTranslation);
+}
+
 void installSystemLocaleTranslation(QCoreApplication& application)
 {
-  QString translationPath(QString::fromLatin1(":/ma/chrono/translation/"));
   QString sysLocaleName(QLocale::system().name());
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("qt_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("qtbase_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("chrono_"));
+
+  QProcessEnvironment processEnvironment = 
+      QProcessEnvironment::systemEnvironment();
+  QString envChronoTranslations = processEnvironment.value(
+      QString::fromLatin1("CHRONO_TRANSLATIONS"));
+  QStringList translationPaths = envChronoTranslations.split(
+      QString::fromLatin1(";"), QString::SkipEmptyParts);
+
+  QString localTranslationPath(QCoreApplication::applicationDirPath()
+      + QString::fromLatin1("/translations"));
+  translationPaths << localTranslationPath;
+
+  typedef QStringList::const_iterator iterator_type;
+  for (iterator_type i = translationPaths.begin(), end = translationPaths.end();
+      i != end; ++i)  
+  {
+    installTranslations(application, *i, sysLocaleName);
+  }
 }
 
 void adjustDesktopAwareGeometry(QWidget& mainWindow)
