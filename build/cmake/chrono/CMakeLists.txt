@@ -45,8 +45,7 @@ if(CHRONO_USE_QT5)
     find_package(Qt5Core          REQUIRED)
     find_package(Qt5Sql           REQUIRED)
     find_package(Qt5Svg           REQUIRED)
-    find_package(Qt5LinguistTools REQUIRED)
-    
+    find_package(Qt5LinguistTools QUIET)
     set(CHRONO_QT_LIBRARIES "Qt5::Core;Qt5::Gui;Qt5::Widgets;Qt5::Sql;Qt5::Svg")
 else()
     find_package(Qt4 REQUIRED QtCore QtGui QtSvg QtSql)
@@ -180,7 +179,7 @@ set(UIC_FORMS
 set(RCC_RESOURCES
     "${RESOURCES_DIR}/chrono.qrc")
 
-set(TS_RESOURCES
+set(TRANSLATION_SOURCES
     "${RESOURCES_DIR}/chrono_ru.ts")
 
 set(HEADERS
@@ -419,6 +418,10 @@ if(WIN32)
     list(APPEND SOURCES "${RESOURCES_DIR}/chrono.rc")
 endif()
 
+if(Qt5::LinguistTools_FOUND)
+    list(APPEND SOURCES ${TRANSLATION_SOURCES})
+endif()
+
 set(LIBRARIES "${Boost_LIBRARIES};${CHRONO_QT_LIBRARIES}")
 
 # Required Windows libraries
@@ -429,21 +432,31 @@ endif()
 if(CHRONO_USE_QT5)
     # Determine linkage type of Qt libraries (via linkage type of Qt Core library)
     get_property(Qt5_Core_TYPE TARGET Qt5::Core PROPERTY TYPE)
-    set(QT5_STATIC_LINKAGE false)
+    set(QT5_IS_STATIC false)
     if(${Qt5_Core_TYPE} STREQUAL "STATIC_LIBRARY")
-        set(QT5_STATIC_LINKAGE true)
+        set(QT5_IS_STATIC true)
     endif()
 
     # Statically linked Qt requires:
     #     All libraries used by Qt internally to be linked explicitly to the target.
     #     Used Qt plugins to be linked explicitly to the target.
-    if(QT5_STATIC_LINKAGE)
+    if(QT5_IS_STATIC)
         # Qt CMake files use IMPORTED_LINK_DEPENDENT_LIBRARIES instead of INTERFACE_LINK_LIBRARIES for OpenGL dependencies.
         # So we need to add those transitive (in case of static linkage) dependencies explicitly.
         set(LIBRARIES "${LIBRARIES};${Qt5Gui_EGL_LIBRARIES};${Qt5Gui_OPENGL_LIBRARIES}")
 
-        # Add (all) Qt plugins for Qt Core, Qt GUI, Qt Widgets Qt SVG and Qt SQL libraries
-        list(APPEND LIBRARIES ${Qt5Core_PLUGINS} ${Qt5Gui_PLUGINS} ${Qt5Widgets_PLUGINS} ${Qt5Svg_PLUGINS} ${Qt5Sql_PLUGINS})
+        # Add required platform integration plugins
+        if(WIN32)            
+            set(LIBRARIES "${LIBRARIES};Qt5::QWindowsIntegrationPlugin")
+        else()
+            # todo:
+            # add support for the rest of platforms supported by Qt
+            # by linking with platform specific plugin
+            # (add platfrom integration plugin to LIBRARIES)
+        endif()
+
+        # Add Qt SVG and Qt SQL plugins
+        set(LIBRARIES "${LIBRARIES};Qt5::QSvgPlugin;Qt5::QSvgIconPlugin;Qt5::QIBaseDriverPlugin")
 
         # Some Qt libraries have no cmake files so wee need to search them ourselves
         # Refer to custom CMake modules:
@@ -472,6 +485,21 @@ if(CHRONO_USE_QT5)
         find_package(FirebirdClient REQUIRED)
         set(LIBRARIES "${LIBRARIES};Firebird::Client")
     endif()
+else()
+    # Statically linked Qt requires:
+    #     All libraries used by Qt internally to be linked explicitly to the target.
+    #     Used Qt plugins to be linked explicitly to the target.
+    if(QT_IS_STATIC)
+        # Add Qt SVG and Qt SQL plugins
+        set(LIBRARIES "${LIBRARIES};Qt4::qsvg;Qt4::qsvgicon;Qt4::qsqlibase")
+
+        # Firebird client librray
+        # Refer to custom CMake modules:
+        #     FindFirebirdClient.cmake
+
+        find_package(FirebirdClient REQUIRED)
+        set(LIBRARIES "${LIBRARIES};Firebird::Client")
+    endif()
 endif()
 
 # Boost chrono requires rt library on *nix
@@ -482,16 +510,21 @@ endif()
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+set(LRELEASE_TRANSLATIONS )
+
 # Wrap Qt generated sources.
 if(CHRONO_USE_QT5)
     qt5_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt5_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
     qt5_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
-    qt5_add_translation(QM_FILES ${TS_RESOURCES})
+    if(Qt5::LinguistTools_FOUND)
+        qt5_add_translation(LRELEASE_TRANSLATIONS ${TRANSLATION_SOURCES})
+    endif()
 else()
     qt4_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt4_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
     qt4_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
+    qt4_add_translation(LRELEASE_TRANSLATIONS ${TRANSLATION_SOURCES})
 endif()
 
 # Turn on parallel compilation of source files for MSVC.
@@ -510,6 +543,5 @@ include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${HEADERS_DIR})
 add_executable(chrono WIN32 
     ${HEADERS} ${SOURCES}
-    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS}
-    ${TS_RESOURCES} ${QM_FILES})
+    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${LRELEASE_TRANSLATIONS})
 target_link_libraries(chrono ${LIBRARIES})

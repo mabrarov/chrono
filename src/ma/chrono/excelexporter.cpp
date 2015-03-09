@@ -13,7 +13,7 @@
 
 // Microsoft Office Objects
 #import "C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE12\MSO.DLL" \
-    rename("DocumentProperties","DocumentPropertiesXL") \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
     rename("RGB", "RGBXL") \
     rename("SearchPath", "SearchPathXL")
 
@@ -25,16 +25,16 @@
     rename("DialogBox", "DialogBoxXL") \
     rename("RGB", "RGBXL") \
     rename("DocumentProperties", "DocumentPropertiesXL") \
-    rename("ReplaceText","ReplaceTextXL") \
-    rename("CopyFile","CopyFileXL") \
-    exclude("IFont","IPicture") no_dual_interfaces
+    rename("ReplaceText", "ReplaceTextXL") \
+    rename("CopyFile", "CopyFileXL") \
+    exclude("IFont", "IPicture") no_dual_interfaces
 
 #elif (MA_CHRONO_BUILD_ENVIRONMENT_OFFICE_VERSION == 2010) \
     && (MA_CHRONO_BUILD_ENVIRONMENT_OFFICE_VERSION_BIT == 64)
 
 // Microsoft Office Objects
 #import "C:\Program Files\Common Files\Microsoft Shared\OFFICE14\MSO.DLL" \
-    rename("DocumentProperties","DocumentPropertiesXL") \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
     rename("RGB", "RGBXL") \
     rename("SearchPath", "SearchPathXL") 
 
@@ -46,16 +46,16 @@
     rename("DialogBox", "DialogBoxXL") \
     rename("RGB", "RGBXL") \
     rename("DocumentProperties", "DocumentPropertiesXL") \
-    rename("ReplaceText","ReplaceTextXL") \
-    rename("CopyFile","CopyFileXL") \
-    exclude("IFont","IPicture") no_dual_interfaces
+    rename("ReplaceText", "ReplaceTextXL") \
+    rename("CopyFile", "CopyFileXL") \
+    exclude("IFont", "IPicture") no_dual_interfaces
 
 #elif (MA_CHRONO_BUILD_ENVIRONMENT_OFFICE_VERSION == 2013) \
     && (MA_CHRONO_BUILD_ENVIRONMENT_OFFICE_VERSION_BIT == 64)
 
 // Microsoft Office Objects
 #import "C:\Program Files\Common Files\Microsoft Shared\OFFICE15\MSO.DLL" \
-    rename("DocumentProperties","DocumentPropertiesXL") \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
     rename("RGB", "RGBXL") \
     rename("SearchPath", "SearchPathXL") 
 
@@ -67,9 +67,9 @@
     rename("DialogBox", "DialogBoxXL") \
     rename("RGB", "RGBXL") \
     rename("DocumentProperties", "DocumentPropertiesXL") \
-    rename("ReplaceText","ReplaceTextXL") \
-    rename("CopyFile","CopyFileXL") \
-    exclude("IFont","IPicture") no_dual_interfaces
+    rename("ReplaceText", "ReplaceTextXL") \
+    rename("CopyFile", "CopyFileXL") \
+    exclude("IFont", "IPicture") no_dual_interfaces
 
 #endif
 
@@ -79,7 +79,7 @@
 
 // Microsoft Office Objects
 #import "C:\Program Files\Common Files\Microsoft Shared\OFFICE12\MSO.DLL" \
-    rename("DocumentProperties","DocumentPropertiesXL") \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
     rename("RGB", "RGBXL") \
     rename("SearchPath", "SearchPathXL")
 
@@ -91,9 +91,29 @@
     rename("DialogBox", "DialogBoxXL") \
     rename("RGB", "RGBXL") \
     rename("DocumentProperties", "DocumentPropertiesXL") \
-    rename("ReplaceText","ReplaceTextXL") \
-    rename("CopyFile","CopyFileXL") \
-    exclude("IFont","IPicture") no_dual_interfaces
+    rename("ReplaceText", "ReplaceTextXL") \
+    rename("CopyFile", "CopyFileXL") \
+    exclude("IFont", "IPicture") no_dual_interfaces
+
+#elif (MA_CHRONO_BUILD_ENVIRONMENT_OFFICE_VERSION == 2010)
+
+// Microsoft Office Objects
+#import "C:\Program Files\Common Files\Microsoft Shared\OFFICE14\MSO.DLL" \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
+    rename("RGB", "RGBXL") \
+    rename("SearchPath", "SearchPathXL") 
+
+// Microsoft VBA Objects
+#import "C:\Program Files\Common Files\Microsoft Shared\VBA\VBA6\VBE6EXT.OLB"  
+
+// Excel Application Objects
+#import "C:\Program Files\Microsoft Office\OFFICE14\EXCEL.EXE" \
+    rename("DialogBox", "DialogBoxXL") \
+    rename("RGB", "RGBXL") \
+    rename("DocumentProperties", "DocumentPropertiesXL") \
+    rename("ReplaceText", "ReplaceTextXL") \
+    rename("CopyFile", "CopyFileXL") \
+    exclude("IFont", "IPicture") no_dual_interfaces
 
 #endif
 
