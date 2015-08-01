@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -20,6 +20,7 @@
 #include <QDate>
 #include <QDateTime>
 #include <QVariant>
+#include <ma/chrono/types_fwd.h>
 
 QT_BEGIN_NAMESPACE
 class QAction;
@@ -86,5 +87,14 @@ typedef QList<QAction*> QActionList;
 
 } // namespace chrono
 } // namespace ma
+
+Q_DECLARE_METATYPE(ma::chrono::OptionalQString)
+Q_DECLARE_METATYPE(ma::chrono::OptionalQDate)
+Q_DECLARE_METATYPE(ma::chrono::OptionalQDateTime)
+Q_DECLARE_METATYPE(ma::chrono::OptionalInt)
+//todo : check if OptionalInt is the same type as OptionalQInt32
+// Q_DECLARE_METATYPE(ma::chrono::OptionalQInt32)
+//todo : check if OptionalInt is the same type as OptionalQInt64
+Q_DECLARE_METATYPE(ma::chrono::OptionalQInt64)
 
 #endif // MA_CHRONO_TYPES_H

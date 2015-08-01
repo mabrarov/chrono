@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -18,6 +18,7 @@
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QProcessEnvironment>
+#include <ma/chrono/types_fwd.h>
 #include <ma/chrono/databasemodel_fwd.h>
 #include <ma/chrono/navigationwindow.h>
 #include <ma/chrono/excelexporter.h>
@@ -139,6 +140,7 @@ int main(int argc, char* argv[])
     setApplicationDescription(application);
     installSystemLocaleTranslation(application);
 
+    ma::chrono::registerGenericMetaTypes();
     ma::chrono::registerDatabaseMetaTypes();
 
     ma::chrono::NavigationWindow navigationWindow;  

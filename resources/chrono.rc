@@ -80,7 +80,7 @@ BEGIN
             VALUE "FileDescription", "Chrono"
             VALUE "FileVersion", "0, 9, 9, 0"
             VALUE "InternalName", "chrono"
-            VALUE "LegalCopyright", "Copyright (c) 2010-2014 Marat Abrarov"
+            VALUE "LegalCopyright", "Copyright (c) 2010-2015 Marat Abrarov"
             VALUE "OriginalFilename", "chrono.exe"
             VALUE "ProductName", "Chrono"
             VALUE "ProductVersion", "0, 9, 9, 0"

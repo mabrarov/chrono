@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::NavigationWindow
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -652,13 +652,13 @@ void NavigationWindow::on_aboutChronoAction_triggered()
 #ifdef MA_CHRONO_BUILD_ENVIRONMENT_DEMO
   QMessageBox aboutBox(QMessageBox::NoIcon, tr("Chrono"), 
       QString::fromLatin1("<center><h3>%1</h3><p>Version %2</p>"
-              "<p>Copyright (c) 2010-2014 Pet project.</p></center>")
+              "<p>Copyright (c) 2010-2015 Pet project.</p></center>")
           .arg(tr("Chrono Demo")).arg(QLatin1String("0.9.9")),
       QMessageBox::Ok, activeWindow);
 #else  // MA_CHRONO_BUILD_ENVIRONMENT_DEMO
   QMessageBox aboutBox(QMessageBox::NoIcon, tr("Chrono"), 
       QString::fromLatin1("<center><h3>%1</h3><p>Version %2</p>"
-              "<p>Copyright (c) 2010-2014 Pet project.</p></center>")
+              "<p>Copyright (c) 2010-2015 Pet project.</p></center>")
           .arg(tr("Chrono")).arg(QLatin1String("0.9.9")),
       QMessageBox::Ok, activeWindow);
 #endif // MA_CHRONO_BUILD_ENVIRONMENT_DEMO

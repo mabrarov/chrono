@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::PaysheetCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -474,11 +474,11 @@ namespace ma
       ExportDataList exportDataList;
       exportDataList << std::make_pair(documentNumberCaption, QVariant(entityData_.docNumber));
       exportDataList << std::make_pair(contractNumberCaption, QVariant(contractNumber_));
-      exportDataList << std::make_pair(ccdNumberCaption, QVariant(ccdNumber_));
+      exportDataList << std::make_pair(ccdNumberCaption, QVariant::fromValue(ccdNumber_));
       exportDataList << std::make_pair(payDateCaption, QVariant(entityData_.payDate));      
       exportDataList << std::make_pair(amountCaption, QVariant::fromValue(model::CurrencyAmount(entityData_.amount)));
       exportDataList << std::make_pair(currencyFullNameCaption, QVariant(currencyFullName_));
-      exportDataList << std::make_pair(accountNumberCaption, QVariant(entityData_.accountNumber));
+      exportDataList << std::make_pair(accountNumberCaption, QVariant::fromValue(entityData_.accountNumber));
       exportDataList << std::make_pair(remarksCaption, entityData_.remark ? QVariant(entityData_.remark.get()) : QVariant(QVariant::String));
       exportDataList << std::make_pair(createUserCaption, QVariant(createUserName_));
       exportDataList << std::make_pair(createTimeCaption, QVariant(entityData_.createTime));

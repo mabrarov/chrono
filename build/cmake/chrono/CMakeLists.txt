@@ -252,6 +252,7 @@ set(HEADERS
     "${HEADERS_DIR}/ma/chrono/taskwindow_fwd.h"
     "${HEADERS_DIR}/ma/chrono/ttermtablemodel_fwd.h"
     "${HEADERS_DIR}/ma/chrono/types.h"
+    "${HEADERS_DIR}/ma/chrono/types_fwd.h"
     "${HEADERS_DIR}/ma/chrono/unaryfiltercondition.h"
     "${HEADERS_DIR}/ma/chrono/userdefinedfilter.h"
     "${HEADERS_DIR}/ma/chrono/userdefinedorder.h"
@@ -302,6 +303,7 @@ set(HEADERS
 
 set(MP_COMPAT_SOURCES
     "${SOURCES_DIR}/main.cpp"
+    "${SOURCES_DIR}/ma/chrono/types.cpp"
     "${SOURCES_DIR}/ma/chrono/actionutility.cpp"
     "${SOURCES_DIR}/ma/chrono/addressbar.cpp"
     "${SOURCES_DIR}/ma/chrono/amountdelegate.cpp"
