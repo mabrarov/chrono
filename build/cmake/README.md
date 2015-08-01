@@ -26,7 +26,7 @@ cmake -D BOOST_INCLUDEDIR=<Boost headers directory> -D BOOST_LIBRARYDIR=<Boost b
       -D CMAKE_USER_MAKE_RULES_OVERRIDE=chrono/build/cmake/static_c_runtime_overrides.cmake 
       -D CMAKE_USER_MAKE_RULES_OVERRIDE_CXX=chrono/build/cmake/static_cxx_runtime_overrides.cmake 
       -D ICU_ROOT=<ICU root directory> 
-      -D FirebirdClient_ROOT=<Firebird cleint root directory>
+      -D FirebirdClient_ROOT=<Firebird client root directory>
       -D Qt5Widgets_DIR=<Qt directory>/qtbase/lib/cmake/Qt5Widgets
       -D Qt5Svg_DIR=<Qt directory>/qtbase/lib/cmake/Qt5Svg 
       -D Qt5Sql_DIR=<Qt directory>/qtbase/lib/cmake/Qt5Sql 

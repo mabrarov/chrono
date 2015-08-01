@@ -478,6 +478,22 @@ if(CHRONO_USE_QT5)
             endif()
         endif()
 
+        # Starting from Qt 5.5.0 FreeType library is used by QtGui
+        if(WIN32 AND NOT(${Qt5Gui_VERSION} VERSION_LESS "5.5.0"))
+            find_package(Qt5FreeType QUIET)
+            if(Qt5FreeType_FOUND)
+                set(LIBRARIES "${LIBRARIES};Qt5::FreeType")
+            endif()
+        endif()
+
+        # Starting from Qt 5.5.0 PCRE library i used by QtCore
+        if(WIN32 AND NOT(${Qt5Core_VERSION} VERSION_LESS "5.5.0"))
+            find_package(Qt5PCRE QUIET)
+            if(Qt5PCRE_FOUND)
+                set(LIBRARIES "${LIBRARIES};Qt5::PCRE")
+            endif()
+        endif()
+
         # Firebird client librray
         # Refer to custom CMake modules: 
         #     FindFirebirdClient.cmake
