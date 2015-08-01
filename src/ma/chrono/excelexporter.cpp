@@ -266,10 +266,10 @@ namespace ma
         }
         else
         {          
-          QVariant data = model.data(index, Qt::CheckStateRole);
-          if (!data.isNull() && data.canConvert<int>())
+          QVariant checkStateData = model.data(index, Qt::CheckStateRole);
+          if (!checkStateData.isNull() && checkStateData.canConvert<int>())
           {
-            setValue(range, Qt::Checked == data.value<int>());
+            setValue(range, Qt::Checked == checkStateData.value<int>());
           }
         }        
       } 

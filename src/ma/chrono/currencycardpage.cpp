@@ -178,14 +178,8 @@ namespace ma
 
       Mode currentMode = mode();
       bool readOnly = viewMode == currentMode;
-      for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
-      {
-        QWidget* widget = *it;
-        if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
-        {
-          edit->setReadOnly(readOnly);
-        }        
-      }
+      WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
       bool peristance = createMode != currentMode && entityId();      
       int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      
       ui_.tabWidget->setTabEnabled(generalTabIndex, peristance);            

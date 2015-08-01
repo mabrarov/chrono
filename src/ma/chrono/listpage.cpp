@@ -232,9 +232,9 @@ namespace ma
         header->setSectionHidden(0, true);      
         tableView_->resizeColumnsToContents();
       }
-      if (QItemSelectionModel* selectionModel = tableView_->selectionModel())
+      if (QItemSelectionModel* itemSelectionModel = tableView_->selectionModel())
       {
-        QObject::connect(selectionModel, SIGNAL(currentChanged(const QModelIndex&, const QModelIndex&)), 
+        QObject::connect(itemSelectionModel, SIGNAL(currentChanged(const QModelIndex&, const QModelIndex&)), 
           SLOT(on_currentChanged(const QModelIndex&, const QModelIndex&)));
       }      
     }

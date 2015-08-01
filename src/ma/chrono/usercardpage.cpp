@@ -188,16 +188,8 @@ namespace ma
 
       Mode currentMode = mode();
       bool readOnly = viewMode == currentMode;
-      for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
-      {
-        QWidget* widget = *it;
-        QLineEdit* edit = qobject_cast<QLineEdit*>(widget);
-        if (edit)
-        {
-          edit->setReadOnly(readOnly);
-          //edit->setEnabled(!readOnly);
-        }
-      }      
+      WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
       bool canSelectPasswordChange = !readOnly && editMode == currentMode;
       for (const_iterator it = changePasswordSelectWidgets_.begin(), end = changePasswordSelectWidgets_.end(); it != end; ++it)
       {

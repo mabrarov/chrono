@@ -11,6 +11,7 @@
 #include <QWidget>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QAbstractSpinBox>
 #include <ma/chrono/widgetutility.h>
 
 namespace ma {
@@ -20,13 +21,21 @@ namespace {
 
 void setWidgetReadOnly(QWidget* widget, bool readOnly)
 {  
-  if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+  if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
   {
-    edit->setReadOnly(readOnly);
+    lineEdit->setReadOnly(readOnly);
   }
   else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
   {
     textEdit->setReadOnly(readOnly);
+  }
+  else if (QAbstractSpinBox* spinBox = qobject_cast<QAbstractSpinBox*>(widget))
+  {
+    spinBox->setReadOnly(readOnly);
+  }
+  else
+  {
+    widget->setEnabled(!readOnly);
   }
 }
 

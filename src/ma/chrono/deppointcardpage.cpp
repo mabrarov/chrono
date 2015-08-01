@@ -159,13 +159,13 @@ namespace ma
       for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
       {
         QWidget* widget = *it;        
-        if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+        if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
         {
-          QObject::connect(edit, SIGNAL(textEdited(const QString&)), SLOT(on_lineEdit_textEdited(const QString&)));
+          QObject::connect(lineEdit, SIGNAL(textEdited(const QString&)), SLOT(on_lineEdit_textEdited(const QString&)));
         }
-        else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+        else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
         {
-          QObject::connect(edit, SIGNAL(textChanged()), SLOT(on_textEdit_textChanged()));
+          QObject::connect(textEdit, SIGNAL(textChanged()), SLOT(on_textEdit_textChanged()));
         }
       }
     }
@@ -177,18 +177,8 @@ namespace ma
 
       Mode currentMode = mode();
       bool readOnly = viewMode == currentMode;
-      for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
-      {
-        QWidget* widget = *it;        
-        if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
-        {
-          edit->setReadOnly(readOnly);                    
-        }
-        else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
-        {
-          textEdit->setReadOnly(readOnly);
-        }        
-      }
+      WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
       bool peristance = createMode != currentMode && entityId();      
       int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      
       ui_.tabWidget->setTabEnabled(generalTabIndex, peristance);            

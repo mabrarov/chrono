@@ -172,14 +172,14 @@ void BankCardPage::connectDataAwareWidgets(const QWidgetList& widgets)
   for (const_iterator i = widgets.begin(), end = widgets.end(); i != end; ++i)
   {
     QWidget* widget = *i;        
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+    if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
     {
-      QObject::connect(edit, SIGNAL(textEdited(const QString&)), 
+      QObject::connect(lineEdit, SIGNAL(textEdited(const QString&)), 
           SLOT(on_lineEdit_textEdited(const QString&)));
     }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+    else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
     {
-      QObject::connect(edit, SIGNAL(textChanged()), 
+      QObject::connect(textEdit, SIGNAL(textChanged()),
           SLOT(on_textEdit_textChanged()));
     }
   }
