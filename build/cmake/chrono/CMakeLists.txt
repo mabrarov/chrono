@@ -426,11 +426,6 @@ endif()
 
 set(LIBRARIES "${Boost_LIBRARIES};${CHRONO_QT_LIBRARIES}")
 
-# Required Windows libraries
-if(WIN32)
-    set(LIBRARIES "comdlg32;uuid;ole32;oleaut32;advapi32;imm32;winmm;winspool;ws2_32.lib;${LIBRARIES}")    
-endif()
-
 if(CHRONO_USE_QT5)
     # Determine linkage type of Qt libraries (via linkage type of Qt Core library)
     get_property(Qt5_Core_TYPE TARGET Qt5::Core PROPERTY TYPE)
@@ -465,12 +460,14 @@ if(CHRONO_USE_QT5)
         #     FindICU.cmake
         #     FindQt5PlatformSupport.cmake
         #     FindQt5HarfBuzzNG.cmake
-
-        find_package(ICU REQUIRED COMPONENTS data uc i18n)
-        set(LIBRARIES "${LIBRARIES};${ICU_LIBRARIES}")
+        #     FindQt5FreeType.cmake
+        #     FindQt5PCRE.cmake
 
         find_package(Qt5PlatformSupport REQUIRED)
         set(LIBRARIES "${LIBRARIES};Qt5::PlatformSupport")
+
+        find_package(ICU REQUIRED COMPONENTS i18n uc data)
+        set(LIBRARIES "${LIBRARIES};${ICU_LIBRARIES}")
 
         # Starting from Qt 5.4.0 HarfBuzz-NG library is included (at least Windows version of Qt 5.4.0)
         if(WIN32 AND NOT(${Qt5Gui_VERSION} VERSION_LESS "5.4.0"))
@@ -488,7 +485,7 @@ if(CHRONO_USE_QT5)
             endif()
         endif()
 
-        # Starting from Qt 5.5.0 PCRE library i used by QtCore
+        # Starting from Qt 5.5.0 PCRE library is used by QtCore
         if(WIN32 AND NOT(${Qt5Core_VERSION} VERSION_LESS "5.5.0"))
             find_package(Qt5PCRE QUIET)
             if(Qt5PCRE_FOUND)
@@ -518,6 +515,11 @@ else()
         find_package(FirebirdClient REQUIRED)
         set(LIBRARIES "${LIBRARIES};Firebird::Client")
     endif()
+endif()
+
+# Required Windows libraries
+if(WIN32)
+    set(LIBRARIES "${LIBRARIES};comdlg32;uuid;ole32;oleaut32;advapi32;imm32;winmm;winspool;ws2_32.lib")
 endif()
 
 # Boost chrono requires rt library on *nix
