@@ -527,10 +527,22 @@ if(UNIX AND BOOST_HAS_CHRONO)
     set(LIBRARIES "${LIBRARIES};rt")
 endif()
 
-# Find includes in corresponding build directories
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 set(LRELEASE_TRANSLATIONS )
+
+# Turn on parallel compilation of source files for MSVC.
+# This otion speeds up overall build time
+if(MSVC)
+    if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16"))
+        set_source_files_properties(
+            ${MP_COMPAT_SOURCES}
+            ${MOC_GENERATED_SOURCES}
+            ${RCC_GENERATED_SOURCES} 
+            PROPERTIES COMPILE_FLAGS /MP)
+    endif()
+endif()
+
+include_directories(${Boost_INCLUDE_DIRS})
+include_directories(${HEADERS_DIR})
 
 # Wrap Qt generated sources.
 if(CHRONO_USE_QT5)
@@ -547,20 +559,9 @@ else()
     qt4_add_translation(LRELEASE_TRANSLATIONS ${TRANSLATION_SOURCES})
 endif()
 
-# Turn on parallel compilation of source files for MSVC.
-# This otion speeds up overall build time
-if(MSVC)
-    if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16"))
-        set_source_files_properties(
-            ${MP_COMPAT_SOURCES}
-            ${MOC_GENERATED_SOURCES}
-            ${RCC_GENERATED_SOURCES} 
-            PROPERTIES COMPILE_FLAGS /MP)
-    endif()
-endif()
+# Required for Qt UIC
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-include_directories(${Boost_INCLUDE_DIRS})
-include_directories(${HEADERS_DIR})
 add_executable(chrono WIN32 
     ${HEADERS} ${SOURCES}
     ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${LRELEASE_TRANSLATIONS})
