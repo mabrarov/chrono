@@ -42,6 +42,9 @@
         <file>ma/chrono/images/view-pim-journal.svgz</file>
         <file>ma/chrono/images/view-refresh.svg</file>
         <file>ma/chrono/images/view-statistics.svgz</file>
-        <file>ma/chrono/images/window-duplicate.svgz</file>        
+        <file>ma/chrono/images/window-duplicate.svgz</file>
+        <file>ma/chrono/translation/chrono_ru.qm</file>
+        <!--<file>ma/chrono/translation/qt_ru.qm</file>-->
+        <!--<file>ma/chrono/translation/qtbase_ru.qm</file>-->
     </qresource>
 </RCC>

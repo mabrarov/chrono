@@ -55,6 +55,7 @@ endif()
 set(HEADERS_DIR   "${PROJECT_SOURCE_DIR}/../../../include")
 set(SOURCES_DIR   "${PROJECT_SOURCE_DIR}/../../../src")
 set(RESOURCES_DIR "${PROJECT_SOURCE_DIR}/../../../resources")
+set(TRANSLATION_OUTPUT_DIR "${RESOURCES_DIR}/ma/chrono/translation")
 
 set(MOC_HEADERS
     "${HEADERS_DIR}/ma/chrono/addressbar.h"
@@ -181,6 +182,9 @@ set(RCC_RESOURCES
 
 set(TRANSLATION_SOURCES
     "${RESOURCES_DIR}/chrono_ru.ts")
+
+# QRC resource file expects compiled translation being located at resources dir
+set_source_files_properties(${TRANSLATION_SOURCES} PROPERTIES OUTPUT_LOCATION "${TRANSLATION_OUTPUT_DIR}")
 
 set(HEADERS
     "${HEADERS_DIR}/ma/chrono/actionutility.h"    
