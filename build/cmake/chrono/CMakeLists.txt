@@ -46,111 +46,17 @@ if(CHRONO_USE_QT5)
     find_package(Qt5Sql           REQUIRED)
     find_package(Qt5Svg           REQUIRED)
     find_package(Qt5LinguistTools QUIET)
-    set(CHRONO_QT_LIBRARIES "Qt5::Core;Qt5::Gui;Qt5::Widgets;Qt5::Sql;Qt5::Svg")
+    set(Qt_LIBRARIES "Qt5::Core;Qt5::Gui;Qt5::Widgets;Qt5::Sql;Qt5::Svg")
 else()
     find_package(Qt4 REQUIRED QtCore QtGui QtSvg QtSql)
-    set(CHRONO_QT_LIBRARIES "Qt4::QtCore;Qt4::QtGui;Qt4::QtSvg;Qt4::QtSql")
+    set(Qt_LIBRARIES "Qt4::QtCore;Qt4::QtGui;Qt4::QtSvg;Qt4::QtSql")
 endif()
 
-set(HEADERS_DIR   "${PROJECT_SOURCE_DIR}/../../../include")
-set(SOURCES_DIR   "${PROJECT_SOURCE_DIR}/../../../src")
-set(RESOURCES_DIR "${PROJECT_SOURCE_DIR}/../../../resources")
+set(PROJECT_BASE_DIR       "${PROJECT_SOURCE_DIR}/../../..")
+set(SOURCES_DIR            "${PROJECT_BASE_DIR}/src")
+set(CPP_HEADERS_DIR        "${PROJECT_BASE_DIR}/include")
+set(RESOURCES_DIR          "${PROJECT_BASE_DIR}/resources")
 set(TRANSLATION_OUTPUT_DIR "${RESOURCES_DIR}/ma/chrono/translation")
-
-set(MOC_HEADERS
-    "${HEADERS_DIR}/ma/chrono/addressbar.h"
-    "${HEADERS_DIR}/ma/chrono/amountdelegate.h"
-    "${HEADERS_DIR}/ma/chrono/autoenterprisecardpage.h"
-    "${HEADERS_DIR}/ma/chrono/autoenterpriselistpage.h"
-    "${HEADERS_DIR}/ma/chrono/autoenterprisetablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/bankcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/banklistpage.h"
-    "${HEADERS_DIR}/ma/chrono/banktablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/basictablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/bolcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/bollistpage.h"
-    "${HEADERS_DIR}/ma/chrono/boltablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/breadcrumbbar.h"
-    "${HEADERS_DIR}/ma/chrono/cardpage.h"
-    "${HEADERS_DIR}/ma/chrono/cardtaskwindow.h"
-    "${HEADERS_DIR}/ma/chrono/ccdcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/ccdlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/ccdtablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/commandbar.h"
-    "${HEADERS_DIR}/ma/chrono/commandbutton.h"
-    "${HEADERS_DIR}/ma/chrono/commanddialog.h"
-    "${HEADERS_DIR}/ma/chrono/conditiondialog.h"
-    "${HEADERS_DIR}/ma/chrono/contractbollistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractboltablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/contractcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractccdlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractccdtablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/contractinsurancelistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractinsurancetablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/contractlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractpaysheetlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractpaysheettablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/contractrelatedlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractsbollistpage.h"
-    "${HEADERS_DIR}/ma/chrono/contractsboltablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/contracttablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/counterpartcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/counterpartlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/counterparttablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/countrycardpage.h"
-    "${HEADERS_DIR}/ma/chrono/countrylistpage.h"
-    "${HEADERS_DIR}/ma/chrono/countrynumericcodedelegate.h"
-    "${HEADERS_DIR}/ma/chrono/countrytablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/currencycardpage.h"
-    "${HEADERS_DIR}/ma/chrono/currencylistpage.h"
-    "${HEADERS_DIR}/ma/chrono/currencynumericcodedelegate.h"
-    "${HEADERS_DIR}/ma/chrono/currencytablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/databaseconnectdialog.h"
-    "${HEADERS_DIR}/ma/chrono/databasemodel.h"
-    "${HEADERS_DIR}/ma/chrono/datapage.h"
-    "${HEADERS_DIR}/ma/chrono/deppointcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/deppointlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/deppointtablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/filterdialog.h"
-    "${HEADERS_DIR}/ma/chrono/icdoccardpage.h"
-    "${HEADERS_DIR}/ma/chrono/icdoclistpage.h"
-    "${HEADERS_DIR}/ma/chrono/icdoctablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/ictcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/ictlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/icttablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/insurancecardpage.h"
-    "${HEADERS_DIR}/ma/chrono/insurancelistpage.h"
-    "${HEADERS_DIR}/ma/chrono/insurancetablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/lcreditcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/lcreditlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/lcredittablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/listpage.h"
-    "${HEADERS_DIR}/ma/chrono/listselectdialog.h"
-    "${HEADERS_DIR}/ma/chrono/listtaskwindow.h"
-    "${HEADERS_DIR}/ma/chrono/navigationbutton.h"
-    "${HEADERS_DIR}/ma/chrono/navigationmodel.h"
-    "${HEADERS_DIR}/ma/chrono/navigationwindow.h"
-    "${HEADERS_DIR}/ma/chrono/page.h"
-    "${HEADERS_DIR}/ma/chrono/paysheetcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/paysheetlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/paysheettablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/ratedelegate.h"
-    "${HEADERS_DIR}/ma/chrono/residentcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/residentlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/residenttablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/sbolcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/sbollistpage.h"
-    "${HEADERS_DIR}/ma/chrono/sboltablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/sortdialog.h"
-    "${HEADERS_DIR}/ma/chrono/summarypage.h"
-    "${HEADERS_DIR}/ma/chrono/taskwindow.h"
-    "${HEADERS_DIR}/ma/chrono/taskwindowmanager.h"
-    "${HEADERS_DIR}/ma/chrono/ttermcardpage.h"
-    "${HEADERS_DIR}/ma/chrono/ttermlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/ttermtablemodel.h"
-    "${HEADERS_DIR}/ma/chrono/usercardpage.h"
-    "${HEADERS_DIR}/ma/chrono/userlistpage.h"
-    "${HEADERS_DIR}/ma/chrono/usertablemodel.h")
 
 set(UIC_FORMS
     "${SOURCES_DIR}/ma/chrono/autoenterprisecardpage.ui"
@@ -177,7 +83,7 @@ set(UIC_FORMS
     "${SOURCES_DIR}/ma/chrono/ttermcardpage.ui"
     "${SOURCES_DIR}/ma/chrono/usercardpage.ui")
 
-set(RCC_RESOURCES
+set(QRC_RESOURCES
     "${RESOURCES_DIR}/chrono.qrc")
 
 set(TRANSLATION_SOURCES
@@ -186,126 +92,221 @@ set(TRANSLATION_SOURCES
 # QRC resource file expects compiled translation being located at resources dir
 set_source_files_properties(${TRANSLATION_SOURCES} PROPERTIES OUTPUT_LOCATION "${TRANSLATION_OUTPUT_DIR}")
 
-set(HEADERS
-    "${HEADERS_DIR}/ma/chrono/actionutility.h"    
-    "${HEADERS_DIR}/ma/chrono/addressbar_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/autoenterprisetablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/banktablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/basicfiltercondition.h"
-    "${HEADERS_DIR}/ma/chrono/basictablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/binaryfiltercondition.h"
-    "${HEADERS_DIR}/ma/chrono/boltablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/breadcrumbbar_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/buildenvironment.h"
-    "${HEADERS_DIR}/ma/chrono/cardpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/cardtaskwindow_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/ccdtablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/commandbar_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/commandbutton_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/conditiondialog_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/constants.h"
-    "${HEADERS_DIR}/ma/chrono/contractbollistpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractboltablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractccdlistpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractccdtablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractinsurancelistpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractinsurancetablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractpaysheetlistpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractpaysheettablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractsbollistpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contractsboltablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/contracttablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/counterparttablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/countrytablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/currencytablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/databaseconnectdialog_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/databasemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/dateutility.h"
-    "${HEADERS_DIR}/ma/chrono/dbconstants.h"
-    "${HEADERS_DIR}/ma/chrono/deppointtablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/excelexporter.h"
-    "${HEADERS_DIR}/ma/chrono/exportdatalist.h"
-    "${HEADERS_DIR}/ma/chrono/fielddescription.h"
-    "${HEADERS_DIR}/ma/chrono/filterdialog_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/filterexpression.h"
-    "${HEADERS_DIR}/ma/chrono/generator.h"
-    "${HEADERS_DIR}/ma/chrono/generator_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/historylist.h"
-    "${HEADERS_DIR}/ma/chrono/icdoctablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/icttablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/insurancetablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/lcredittablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/listpage_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/listtaskwindow_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/localeutility.h"
-    "${HEADERS_DIR}/ma/chrono/modelutility.h"
-    "${HEADERS_DIR}/ma/chrono/navigationbutton_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/navigationmodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/onefieldbasedfiltercondition.h"
-    "${HEADERS_DIR}/ma/chrono/orderexpression.h"
-    "${HEADERS_DIR}/ma/chrono/page_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/paysheettablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/residenttablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/resourcemanager.h"
-    "${HEADERS_DIR}/ma/chrono/resourcemanager_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/sboltablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/sortdialog_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/sqlutility.h"
-    "${HEADERS_DIR}/ma/chrono/tabledescription.h"
-    "${HEADERS_DIR}/ma/chrono/taskwindowmanager_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/taskwindow_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/ttermtablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/types.h"
-    "${HEADERS_DIR}/ma/chrono/types_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/unaryfiltercondition.h"
-    "${HEADERS_DIR}/ma/chrono/userdefinedfilter.h"
-    "${HEADERS_DIR}/ma/chrono/userdefinedorder.h"
-    "${HEADERS_DIR}/ma/chrono/usertablemodel_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/widgetutility.h"
-    "${HEADERS_DIR}/ma/chrono/model/autoenterprise.h"
-    "${HEADERS_DIR}/ma/chrono/model/autoenterprise_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/bank.h"
-    "${HEADERS_DIR}/ma/chrono/model/bank_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/bol.h"
-    "${HEADERS_DIR}/ma/chrono/model/bol_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/ccd.h"
-    "${HEADERS_DIR}/ma/chrono/model/ccd_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/contract.h"
-    "${HEADERS_DIR}/ma/chrono/model/contract_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/counterpart.h"
-    "${HEADERS_DIR}/ma/chrono/model/counterpart_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/country.h"
-    "${HEADERS_DIR}/ma/chrono/model/country_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/currency.h"
-    "${HEADERS_DIR}/ma/chrono/model/currencyamount.h"
-    "${HEADERS_DIR}/ma/chrono/model/currencyamount_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/currency_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/decimalamount.h"
-    "${HEADERS_DIR}/ma/chrono/model/deppoint.h"
-    "${HEADERS_DIR}/ma/chrono/model/deppoint_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/icdoc.h"
-    "${HEADERS_DIR}/ma/chrono/model/icdoc_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/ict.h"
-    "${HEADERS_DIR}/ma/chrono/model/ict_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/insurance.h"
-    "${HEADERS_DIR}/ma/chrono/model/insurance_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/lcredit.h"
-    "${HEADERS_DIR}/ma/chrono/model/lcredit_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/paysheet.h"
-    "${HEADERS_DIR}/ma/chrono/model/paysheet_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/rateamount.h"
-    "${HEADERS_DIR}/ma/chrono/model/rateamount_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/resident.h"
-    "${HEADERS_DIR}/ma/chrono/model/resident_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/sbol.h"
-    "${HEADERS_DIR}/ma/chrono/model/sbol_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/tterm.h"
-    "${HEADERS_DIR}/ma/chrono/model/tterm_fwd.h"
-    "${HEADERS_DIR}/ma/chrono/model/user.h"
-    "${HEADERS_DIR}/ma/chrono/model/user_fwd.h"
+set(MOC_HEADERS
+    "${CPP_HEADERS_DIR}/ma/chrono/addressbar.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/amountdelegate.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/autoenterprisecardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/autoenterpriselistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/autoenterprisetablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/bankcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/banklistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/banktablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/basictablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/bolcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/bollistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/boltablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/breadcrumbbar.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/cardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/cardtaskwindow.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ccdcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ccdlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ccdtablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/commandbar.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/commandbutton.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/commanddialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/conditiondialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractbollistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractboltablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractccdlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractccdtablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractinsurancelistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractinsurancetablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractpaysheetlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractpaysheettablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractrelatedlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractsbollistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractsboltablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contracttablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/counterpartcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/counterpartlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/counterparttablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/countrycardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/countrylistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/countrynumericcodedelegate.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/countrytablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/currencycardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/currencylistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/currencynumericcodedelegate.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/currencytablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/databaseconnectdialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/databasemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/datapage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/deppointcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/deppointlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/deppointtablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/filterdialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icdoccardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icdoclistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icdoctablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ictcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ictlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icttablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/insurancecardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/insurancelistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/insurancetablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/lcreditcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/lcreditlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/lcredittablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/listpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/listselectdialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/listtaskwindow.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/navigationbutton.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/navigationmodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/navigationwindow.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/page.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/paysheetcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/paysheetlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/paysheettablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ratedelegate.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/residentcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/residentlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/residenttablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sbolcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sbollistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sboltablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sortdialog.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/summarypage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/taskwindow.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/taskwindowmanager.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ttermcardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ttermlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ttermtablemodel.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/usercardpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/userlistpage.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/usertablemodel.h")
+
+set(CPP_HEADERS
+    "${CPP_HEADERS_DIR}/ma/chrono/actionutility.h"    
+    "${CPP_HEADERS_DIR}/ma/chrono/addressbar_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/autoenterprisetablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/banktablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/basicfiltercondition.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/basictablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/binaryfiltercondition.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/boltablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/breadcrumbbar_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/buildenvironment.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/cardpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/cardtaskwindow_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ccdtablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/commandbar_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/commandbutton_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/conditiondialog_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/constants.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractbollistpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractboltablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractccdlistpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractccdtablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractinsurancelistpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractinsurancetablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractpaysheetlistpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractpaysheettablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractsbollistpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contractsboltablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/contracttablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/counterparttablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/countrytablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/currencytablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/databaseconnectdialog_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/databasemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/dateutility.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/dbconstants.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/deppointtablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/excelexporter.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/exportdatalist.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/fielddescription.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/filterdialog_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/filterexpression.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/generator.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/generator_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/historylist.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icdoctablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/icttablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/insurancetablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/lcredittablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/listpage_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/listtaskwindow_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/localeutility.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/modelutility.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/navigationbutton_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/navigationmodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/onefieldbasedfiltercondition.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/orderexpression.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/page_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/paysheettablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/residenttablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/resourcemanager.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/resourcemanager_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sboltablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sortdialog_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/sqlutility.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/tabledescription.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/taskwindowmanager_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/taskwindow_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/ttermtablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/types.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/types_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/unaryfiltercondition.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/userdefinedfilter.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/userdefinedorder.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/usertablemodel_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/widgetutility.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/autoenterprise.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/autoenterprise_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/bank.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/bank_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/bol.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/bol_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/ccd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/ccd_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/contract.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/contract_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/counterpart.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/counterpart_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/country.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/country_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/currency.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/currencyamount.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/currencyamount_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/currency_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/decimalamount.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/deppoint.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/deppoint_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/icdoc.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/icdoc_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/ict.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/ict_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/insurance.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/insurance_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/lcredit.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/lcredit_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/paysheet.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/paysheet_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/rateamount.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/rateamount_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/resident.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/resident_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/sbol.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/sbol_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/tterm.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/tterm_fwd.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/user.h"
+    "${CPP_HEADERS_DIR}/ma/chrono/model/user_fwd.h"
     ${MOC_HEADERS})
 
-set(MP_COMPAT_SOURCES
+set(MP_COMPAT_CPP_SOURCES
     "${SOURCES_DIR}/main.cpp"
     "${SOURCES_DIR}/ma/chrono/types.cpp"
     "${SOURCES_DIR}/ma/chrono/actionutility.cpp"
@@ -416,19 +417,20 @@ set(MP_COMPAT_SOURCES
     "${SOURCES_DIR}/ma/chrono/model/decimalamount.cpp")
 
 # Some source files doesn't support multithreaded compilation 
-list(APPEND SOURCES ${MP_COMPAT_SOURCES} ${UIC_FORMS}
+set(CPP_SOURCES 
+    "${MP_COMPAT_CPP_SOURCES}"
     "${SOURCES_DIR}/ma/chrono/excelexporter.cpp")
 
-# Windows specific source files
+set(NATIVE_RESOURCES )
+set(NATIVE_RESOURCE_HEADERS )
 if(WIN32)
-    list(APPEND SOURCES "${RESOURCES_DIR}/chrono.rc")
+    list(APPEND NATIVE_RESOURCES "${RESOURCES_DIR}/chrono.rc")
+    list(APPEND NATIVE_RESOURCE_HEADERS "${RESOURCES_DIR}/resource.h")
 endif()
 
-if((NOT CHRONO_USE_QT5) OR Qt5LinguistTools_FOUND)
-    list(APPEND SOURCES ${TRANSLATION_SOURCES})
-endif()
-
-set(LIBRARIES "${Boost_LIBRARIES};${CHRONO_QT_LIBRARIES}")
+set(LIBRARIES 
+    "${Boost_LIBRARIES}"
+    "${Qt_LIBRARIES}")
 
 if(CHRONO_USE_QT5)
     # Determine linkage type of Qt libraries (via linkage type of Qt Core library)
@@ -444,11 +446,13 @@ if(CHRONO_USE_QT5)
     if(QT5_IS_STATIC)
         # Qt CMake files use IMPORTED_LINK_DEPENDENT_LIBRARIES instead of INTERFACE_LINK_LIBRARIES for OpenGL dependencies.
         # So we need to add those transitive (in case of static linkage) dependencies explicitly.
-        set(LIBRARIES "${LIBRARIES};${Qt5Gui_EGL_LIBRARIES};${Qt5Gui_OPENGL_LIBRARIES}")
+        list(APPEND LIBRARIES 
+            "${Qt5Gui_EGL_LIBRARIES}"
+            "${Qt5Gui_OPENGL_LIBRARIES}")
 
         # Add required platform integration plugins
-        if(WIN32)            
-            set(LIBRARIES "${LIBRARIES};Qt5::QWindowsIntegrationPlugin")
+        if(WIN32)
+            list(APPEND LIBRARIES "Qt5::QWindowsIntegrationPlugin")
         else()
             # todo:
             # add support for the rest of platforms supported by Qt
@@ -457,7 +461,7 @@ if(CHRONO_USE_QT5)
         endif()
 
         # Add Qt SVG and Qt SQL plugins
-        set(LIBRARIES "${LIBRARIES};Qt5::QSvgPlugin;Qt5::QSvgIconPlugin;Qt5::QIBaseDriverPlugin")
+        list(APPEND LIBRARIES "Qt5::QSvgPlugin;Qt5::QSvgIconPlugin;Qt5::QIBaseDriverPlugin")
 
         # Some Qt libraries have no cmake files so wee need to search them ourselves
         # Refer to custom CMake modules:
@@ -468,16 +472,16 @@ if(CHRONO_USE_QT5)
         #     FindQt5PCRE.cmake
 
         find_package(Qt5PlatformSupport REQUIRED)
-        set(LIBRARIES "${LIBRARIES};Qt5::PlatformSupport")
+        list(APPEND LIBRARIES "Qt5::PlatformSupport")
 
         find_package(ICU REQUIRED COMPONENTS i18n uc data)
-        set(LIBRARIES "${LIBRARIES};${ICU_LIBRARIES}")
+        list(APPEND LIBRARIES "${ICU_LIBRARIES}")
 
         # Starting from Qt 5.4.0 HarfBuzz-NG library is included (at least Windows version of Qt 5.4.0)
         if(WIN32 AND NOT(${Qt5Gui_VERSION} VERSION_LESS "5.4.0"))
             find_package(Qt5HarfBuzzNG QUIET)
             if(Qt5HarfBuzzNG_FOUND)
-                set(LIBRARIES "${LIBRARIES};Qt5::HarfBuzzNG")
+                list(APPEND LIBRARIES "Qt5::HarfBuzzNG")
             endif()
         endif()
 
@@ -485,7 +489,7 @@ if(CHRONO_USE_QT5)
         if(WIN32 AND NOT(${Qt5Gui_VERSION} VERSION_LESS "5.5.0"))
             find_package(Qt5FreeType QUIET)
             if(Qt5FreeType_FOUND)
-                set(LIBRARIES "${LIBRARIES};Qt5::FreeType")
+                list(APPEND LIBRARIES "Qt5::FreeType")
             endif()
         endif()
 
@@ -493,7 +497,7 @@ if(CHRONO_USE_QT5)
         if(WIN32 AND NOT(${Qt5Core_VERSION} VERSION_LESS "5.5.0"))
             find_package(Qt5PCRE QUIET)
             if(Qt5PCRE_FOUND)
-                set(LIBRARIES "${LIBRARIES};Qt5::PCRE")
+                list(APPEND LIBRARIES "Qt5::PCRE")
             endif()
         endif()
 
@@ -502,7 +506,7 @@ if(CHRONO_USE_QT5)
         #     FindFirebirdClient.cmake
 
         find_package(FirebirdClient REQUIRED)
-        set(LIBRARIES "${LIBRARIES};Firebird::Client")
+        list(APPEND LIBRARIES "Firebird::Client")
     endif()
 else()
     # Statically linked Qt requires:
@@ -510,35 +514,45 @@ else()
     #     Used Qt plugins to be linked explicitly to the target.
     if(QT_IS_STATIC)
         # Add Qt SVG and Qt SQL plugins
-        set(LIBRARIES "${LIBRARIES};Qt4::qsvg;Qt4::qsvgicon;Qt4::qsqlibase")
+        list(APPEND LIBRARIES "Qt4::qsvg;Qt4::qsvgicon;Qt4::qsqlibase")
 
         # Firebird client librray
         # Refer to custom CMake modules:
         #     FindFirebirdClient.cmake
 
         find_package(FirebirdClient REQUIRED)
-        set(LIBRARIES "${LIBRARIES};Firebird::Client")
+        list(APPEND LIBRARIES "Firebird::Client")
     endif()
 endif()
 
 # Required Windows libraries
 if(WIN32)
-    set(LIBRARIES "${LIBRARIES};comdlg32;uuid;ole32;oleaut32;advapi32;imm32;winmm;winspool;ws2_32.lib")
+    list(APPEND LIBRARIES 
+        "comdlg32"
+        "uuid"
+        "ole32"
+        "oleaut32"
+        "advapi32"
+        "imm32"
+        "winmm"
+        "winspool"
+        "ws2_32.lib")
 endif()
 
 # Boost chrono requires rt library on *nix
 if(UNIX AND BOOST_HAS_CHRONO)
-    set(LIBRARIES "${LIBRARIES};rt")
+    list(APPEND LIBRARIES 
+        "rt")
 endif()
 
-set(LRELEASE_TRANSLATIONS )
+set(QM_FILES )
 
 # Turn on parallel compilation of source files for MSVC.
 # This otion speeds up overall build time
 if(MSVC)
     if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16"))
         set_source_files_properties(
-            ${MP_COMPAT_SOURCES}
+            ${MP_COMPAT_CPP_SOURCES}
             ${MOC_GENERATED_SOURCES}
             ${RCC_GENERATED_SOURCES} 
             PROPERTIES COMPILE_FLAGS /MP)
@@ -546,27 +560,43 @@ if(MSVC)
 endif()
 
 include_directories(${Boost_INCLUDE_DIRS})
-include_directories(${HEADERS_DIR})
+include_directories(${CPP_HEADERS_DIR})
 
 # Wrap Qt generated sources.
 if(CHRONO_USE_QT5)
     qt5_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt5_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
-    qt5_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
+    qt5_add_resources(RCC_GENERATED_SOURCES ${QRC_RESOURCES})
     if(Qt5LinguistTools_FOUND)
-        qt5_add_translation(LRELEASE_TRANSLATIONS ${TRANSLATION_SOURCES})
+        qt5_add_translation(QM_FILES ${TRANSLATION_SOURCES})
     endif()
 else()
     qt4_wrap_cpp(MOC_GENERATED_SOURCES ${MOC_HEADERS})
     qt4_wrap_ui(UIC_GENERATED_HEADERS ${UIC_FORMS})
-    qt4_add_resources(RCC_GENERATED_SOURCES ${RCC_RESOURCES})
-    qt4_add_translation(LRELEASE_TRANSLATIONS ${TRANSLATION_SOURCES})
+    qt4_add_resources(RCC_GENERATED_SOURCES ${QRC_RESOURCES})
+    qt4_add_translation(QM_FILES ${TRANSLATION_SOURCES})
 endif()
 
 # Required for Qt UIC
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable(chrono WIN32 
-    ${HEADERS} ${SOURCES}
-    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${LRELEASE_TRANSLATIONS})
+    ${CPP_HEADERS} ${CPP_SOURCES}
+    ${NATIVE_RESOURCES} ${NATIVE_RESOURCE_HEADERS}
+    ${MOC_GENERATED_SOURCES} ${RCC_GENERATED_SOURCES} ${UIC_GENERATED_HEADERS} ${QM_FILES}
+    ${TRANSLATION_SOURCES})
 target_link_libraries(chrono ${LIBRARIES})
+
+source_group("Form Files" FILES
+    ${UIC_FORMS})
+source_group("Generated Files" FILES
+    ${MOC_GENERATED_SOURCES} 
+    ${QRC_GENERATED_SOURCES}
+    ${UIC_GENERATED_HEADERS}
+    ${QM_FILES})
+source_group("Resource Files" FILES
+    ${NATIVE_RESOURCES} 
+    ${NATIVE_RESOURCE_HEADERS}
+    ${QRC_RESOURCES})
+source_group("Translation Files" FILES
+    ${TRANSLATION_SOURCES})
