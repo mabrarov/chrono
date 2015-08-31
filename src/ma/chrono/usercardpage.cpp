@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::UserCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -188,16 +188,8 @@ namespace ma
 
       Mode currentMode = mode();
       bool readOnly = viewMode == currentMode;
-      for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
-      {
-        QWidget* widget = *it;
-        QLineEdit* edit = qobject_cast<QLineEdit*>(widget);
-        if (edit)
-        {
-          edit->setReadOnly(readOnly);
-          //edit->setEnabled(!readOnly);
-        }
-      }      
+      WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
       bool canSelectPasswordChange = !readOnly && editMode == currentMode;
       for (const_iterator it = changePasswordSelectWidgets_.begin(), end = changePasswordSelectWidgets_.end(); it != end; ++it)
       {

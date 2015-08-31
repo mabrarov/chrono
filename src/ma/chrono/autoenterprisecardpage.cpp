@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::AutoenterpriseCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -172,14 +172,14 @@ void AutoenterpriseCardPage::connectDataAwareWidgets(
   for (const_iterator i = widgets.begin(), end = widgets.end(); i != end; ++i)
   {
     QWidget* widget = *i;
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+    if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
     {
-      QObject::connect(edit, SIGNAL(textEdited(const QString&)), 
+      QObject::connect(lineEdit, SIGNAL(textEdited(const QString&)),
           SLOT(on_lineEdit_textEdited(const QString&)));
     }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+    else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
     {
-      QObject::connect(edit, SIGNAL(textChanged()), 
+      QObject::connect(textEdit, SIGNAL(textChanged()),
           SLOT(on_textEdit_textChanged()));
     }
   }

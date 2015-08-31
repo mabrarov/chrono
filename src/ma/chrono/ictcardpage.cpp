@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::IctCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -236,20 +236,20 @@ void IctCardPage::connectDataAwareWidgets()
       end = dataAwareWidgets_.end(); it != end; ++it)
   {
     QWidget* widget = *it;        
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+    if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(lineEdit,
           SIGNAL(textEdited(const QString&)), 
           SLOT(on_lineEdit_textEdited(const QString&)));
     }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+    else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(textEdit,
           SIGNAL(textChanged()), SLOT(on_textEdit_textChanged()));
     }        
-    else if (QDateEdit* edit = qobject_cast<QDateEdit*>(widget))
+    else if (QDateEdit* dateEdit = qobject_cast<QDateEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(dateEdit,
           SIGNAL(dateChanged(const QDate&)), 
           SLOT(on_dateEdit_dateChanged(const QDate&)));
     }
@@ -263,27 +263,8 @@ void IctCardPage::updateWidgets()
 
   Mode currentMode = mode();
   bool readOnly = viewMode == currentMode;
-  for (const_iterator it = dataAwareWidgets_.begin(), 
-      end = dataAwareWidgets_.end(); it != end; ++it)
-  {
-    QWidget* widget = *it;        
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }
-    else if (QAbstractSpinBox* edit = qobject_cast<QAbstractSpinBox*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }  
-    else 
-    {
-      widget->setEnabled(!readOnly);
-    } 
-  }
+  WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
   bool peristance = createMode != currentMode && entityId();      
   int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      
   ui_.tabWidget->setTabEnabled(generalTabIndex, peristance);            
@@ -916,33 +897,33 @@ IctCardPage::PaysheetDataVector IctCardPage::readPaysheetData(
   PaysheetDataVector vector;
   while (query.next())
   {
-    PaysheetData data;
-    data.paysheet.paysheetId = query.value(0).toLongLong();
-    data.paysheet.contractId = query.value(1).toLongLong();
-    data.contractNumber      = query.value(2).toString();
-    data.paysheet.ccdId      = query.value(3).isNull() 
+    PaysheetData paysheetData;
+    paysheetData.paysheet.paysheetId = query.value(0).toLongLong();
+    paysheetData.paysheet.contractId = query.value(1).toLongLong();
+    paysheetData.contractNumber      = query.value(2).toString();
+    paysheetData.paysheet.ccdId      = query.value(3).isNull() 
         ? OptionalQInt64() : query.value(3).toLongLong();
-    data.ccdNumber           = query.value(4).isNull() 
+    paysheetData.ccdNumber           = query.value(4).isNull() 
         ? OptionalQString() : query.value(4).toString();
-    data.paysheet.docNumber  = query.value(5).toString();
-    data.paysheet.payDate    = 
+    paysheetData.paysheet.docNumber  = query.value(5).toString();
+    paysheetData.paysheet.payDate    = 
         databaseModel()->convertFromServer(query.value(6).toDate());
-    data.paysheet.amount     = query.value(7).toLongLong();
-    data.currencyAlphabeticCode  = query.value(8).toString();
-    data.paysheet.accountNumber  = query.value(9).isNull() 
+    paysheetData.paysheet.amount     = query.value(7).toLongLong();
+    paysheetData.currencyAlphabeticCode  = query.value(8).toString();
+    paysheetData.paysheet.accountNumber  = query.value(9).isNull() 
         ? OptionalQString() : query.value(9).toString();
-    data.paysheet.remark         = query.isNull(10) 
+    paysheetData.paysheet.remark         = query.isNull(10) 
         ? OptionalQString() : query.value(10).toString();
-    data.paysheet.createUserId   = query.value(11).toLongLong();
-    data.paysheet.updateUserId   = query.value(12).toLongLong();        
-    data.paysheet.createTime = databaseModel()->convertFromServer(
+    paysheetData.paysheet.createUserId   = query.value(11).toLongLong();
+    paysheetData.paysheet.updateUserId   = query.value(12).toLongLong();        
+    paysheetData.paysheet.createTime = databaseModel()->convertFromServer(
         query.value(15).toDateTime()); 
-    data.paysheet.updateTime = databaseModel()->convertFromServer(
+    paysheetData.paysheet.updateTime = databaseModel()->convertFromServer(
         query.value(16).toDateTime());              
-    data.paysheet.currencyId = query.value(17).toLongLong();
-    data.passportNumber = query.value(18).isNull()
+    paysheetData.paysheet.currencyId = query.value(17).toLongLong();
+    paysheetData.passportNumber = query.value(18).isNull()
         ? OptionalQString() : query.value(18).toString();
-    vector.append(data);
+    vector.append(paysheetData);
   }      
   return vector;
 }

@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::IcdocCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -232,21 +232,21 @@ void IcdocCardPage::connectDataAwareWidgets()
       end = dataAwareWidgets_.end(); it != end; ++it)
   {
     QWidget* widget = *it;        
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+    if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(lineEdit,
           SIGNAL(textEdited(const QString&)), 
           SLOT(on_lineEdit_textEdited(const QString&)));
     }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+    else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(textEdit,
           SIGNAL(textChanged()),
           SLOT(on_textEdit_textChanged()));
     }        
-    else if (QDateEdit* edit = qobject_cast<QDateEdit*>(widget))
+    else if (QDateEdit* dateEdit = qobject_cast<QDateEdit*>(widget))
     {
-      QObject::connect(edit, 
+      QObject::connect(dateEdit,
           SIGNAL(dateChanged(const QDate&)), 
           SLOT(on_dateEdit_dateChanged(const QDate&)));
     }
@@ -260,27 +260,8 @@ void IcdocCardPage::updateWidgets()
 
   Mode currentMode = mode();
   bool readOnly = viewMode == currentMode;
-  for (const_iterator it = dataAwareWidgets_.begin(),
-      end = dataAwareWidgets_.end(); it != end; ++it)
-  {
-    QWidget* widget = *it;        
-    if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }
-    else if (QAbstractSpinBox* edit = qobject_cast<QAbstractSpinBox*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }
-    else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
-    {
-      edit->setReadOnly(readOnly);          
-    }  
-    else 
-    {
-      widget->setEnabled(!readOnly);
-    } 
-  }
+  WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
+
   bool peristance = createMode != currentMode && entityId();      
   int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      
   ui_.tabWidget->setTabEnabled(generalTabIndex, peristance);            
@@ -867,34 +848,34 @@ IcdocCardPage::CcdDataVector IcdocCardPage::readCcdData(QSqlQuery& query) const
   CcdDataVector vector;
   while (query.next())
   {
-    CcdData data;
-    data.ccd.ccdId  = query.value(0).toLongLong();
-    data.ccd.number = query.value(1).toString();
-    data.ccd.contractId = query.value(2).toLongLong();
-    data.ccd.deppointId = query.value(3).toLongLong();
-    data.ccd.exportPermDate = databaseModel()->convertFromServer(query.value(4).toDate());
-    data.ccd.exportDate  = query.value(5).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(5).toDate());
-    data.ccd.productCode = query.value(6).isNull() ? OptionalQString() : query.value(6).toString();
-    data.ccd.series      = query.value(7).isNull() ? OptionalQString() : query.value(7).toString();
-    data.ccd.ttermId = query.value(8).toLongLong();
-    data.ccd.amount  = query.value(9).toLongLong();
-    data.ccd.duty    = query.value(10).isNull() ? OptionalQInt64() : query.value(10).toLongLong();
-    data.ccd.rate    = query.value(11).isNull() ? OptionalQInt64() : query.value(11).toLongLong();
-    data.ccd.zeroTaxPeriod   = query.value(12).toInt();
-    data.ccd.paymentTermType = query.value(13).toInt();
-    data.ccd.paymentTermDate = query.value(14).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(14).toDate());
-    data.ccd.paymentTermPeriod = query.value(15).isNull() ? OptionalInt() : query.value(15).toInt();
-    data.paymentLimitDate = query.value(16).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(16).toDate());
-    data.zeroTaxLimitDate = databaseModel()->convertFromServer(query.value(17).toDate());
-    data.ccd.createUserId = query.value(18).toLongLong();
-    data.ccd.updateUserId = query.value(19).toLongLong();
-    data.ccd.createTime   = databaseModel()->convertFromServer(query.value(20).toDateTime());
-    data.ccd.updateTime   = databaseModel()->convertFromServer(query.value(21).toDateTime());
-    data.contractNumber   = query.value(22).toString();
-    data.passportNumber   = query.value(23).isNull() ? OptionalQString() : query.value(23).toString();
-    data.currencyId       = query.value(24).toLongLong();
-    data.currencyAlphabeticCode = query.value(25).toString();
-    vector.append(data);
+    CcdData ccdData;
+    ccdData.ccd.ccdId  = query.value(0).toLongLong();
+    ccdData.ccd.number = query.value(1).toString();
+    ccdData.ccd.contractId = query.value(2).toLongLong();
+    ccdData.ccd.deppointId = query.value(3).toLongLong();
+    ccdData.ccd.exportPermDate = databaseModel()->convertFromServer(query.value(4).toDate());
+    ccdData.ccd.exportDate  = query.value(5).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(5).toDate());
+    ccdData.ccd.productCode = query.value(6).isNull() ? OptionalQString() : query.value(6).toString();
+    ccdData.ccd.series      = query.value(7).isNull() ? OptionalQString() : query.value(7).toString();
+    ccdData.ccd.ttermId = query.value(8).toLongLong();
+    ccdData.ccd.amount  = query.value(9).toLongLong();
+    ccdData.ccd.duty    = query.value(10).isNull() ? OptionalQInt64() : query.value(10).toLongLong();
+    ccdData.ccd.rate    = query.value(11).isNull() ? OptionalQInt64() : query.value(11).toLongLong();
+    ccdData.ccd.zeroTaxPeriod   = query.value(12).toInt();
+    ccdData.ccd.paymentTermType = query.value(13).toInt();
+    ccdData.ccd.paymentTermDate = query.value(14).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(14).toDate());
+    ccdData.ccd.paymentTermPeriod = query.value(15).isNull() ? OptionalInt() : query.value(15).toInt();
+    ccdData.paymentLimitDate = query.value(16).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(16).toDate());
+    ccdData.zeroTaxLimitDate = databaseModel()->convertFromServer(query.value(17).toDate());
+    ccdData.ccd.createUserId = query.value(18).toLongLong();
+    ccdData.ccd.updateUserId = query.value(19).toLongLong();
+    ccdData.ccd.createTime   = databaseModel()->convertFromServer(query.value(20).toDateTime());
+    ccdData.ccd.updateTime   = databaseModel()->convertFromServer(query.value(21).toDateTime());
+    ccdData.contractNumber   = query.value(22).toString();
+    ccdData.passportNumber   = query.value(23).isNull() ? OptionalQString() : query.value(23).toString();
+    ccdData.currencyId       = query.value(24).toLongLong();
+    ccdData.currencyAlphabeticCode = query.value(25).toString();
+    vector.append(ccdData);
   }      
   return vector;
 }
@@ -1042,34 +1023,34 @@ boost::optional<IcdocCardPage::CcdData> IcdocCardPage::readCcdData(qint64 ccdId)
     {
       if (query.next())
       {          
-        CcdData data;
-        data.ccd.ccdId  = ccdId;
-        data.ccd.number = query.value(0).toString();
-        data.ccd.contractId = query.value(1).toLongLong();
-        data.ccd.deppointId = query.value(2).toLongLong();
-        data.ccd.exportPermDate = databaseModel()->convertFromServer(query.value(3).toDate());
-        data.ccd.exportDate  = query.value(4).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(4).toDate());
-        data.ccd.productCode = query.value(5).isNull() ? OptionalQString() : query.value(5).toString();
-        data.ccd.series      = query.value(6).isNull() ? OptionalQString() : query.value(6).toString();
-        data.ccd.ttermId = query.value(7).toLongLong();
-        data.ccd.amount  = query.value(8).toLongLong();
-        data.ccd.duty    = query.value(9).isNull() ? OptionalQInt64() : query.value(9).toLongLong();
-        data.ccd.rate    = query.value(10).isNull() ? OptionalQInt64() : query.value(10).toLongLong();
-        data.ccd.zeroTaxPeriod   = query.value(11).toInt();
-        data.ccd.paymentTermType = query.value(12).toInt();
-        data.ccd.paymentTermDate = query.value(13).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(13).toDate());
-        data.ccd.paymentTermPeriod = query.value(14).isNull() ? OptionalInt() : query.value(14).toInt();
-        data.paymentLimitDate = query.value(15).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(15).toDate());
-        data.zeroTaxLimitDate = databaseModel()->convertFromServer(query.value(16).toDate());
-        data.ccd.createUserId = query.value(17).toLongLong();
-        data.ccd.updateUserId = query.value(18).toLongLong();
-        data.ccd.createTime   = databaseModel()->convertFromServer(query.value(19).toDateTime());
-        data.ccd.updateTime   = databaseModel()->convertFromServer(query.value(20).toDateTime());
-        data.contractNumber   = query.value(21).toString();
-        data.passportNumber   = query.value(22).isNull() ? OptionalQString() : query.value(22).toString();
-        data.currencyId       = query.value(23).toLongLong();
-        data.currencyAlphabeticCode = query.value(24).toString();
-        return data;
+        CcdData ccdData;
+        ccdData.ccd.ccdId  = ccdId;
+        ccdData.ccd.number = query.value(0).toString();
+        ccdData.ccd.contractId = query.value(1).toLongLong();
+        ccdData.ccd.deppointId = query.value(2).toLongLong();
+        ccdData.ccd.exportPermDate = databaseModel()->convertFromServer(query.value(3).toDate());
+        ccdData.ccd.exportDate  = query.value(4).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(4).toDate());
+        ccdData.ccd.productCode = query.value(5).isNull() ? OptionalQString() : query.value(5).toString();
+        ccdData.ccd.series      = query.value(6).isNull() ? OptionalQString() : query.value(6).toString();
+        ccdData.ccd.ttermId = query.value(7).toLongLong();
+        ccdData.ccd.amount  = query.value(8).toLongLong();
+        ccdData.ccd.duty    = query.value(9).isNull() ? OptionalQInt64() : query.value(9).toLongLong();
+        ccdData.ccd.rate    = query.value(10).isNull() ? OptionalQInt64() : query.value(10).toLongLong();
+        ccdData.ccd.zeroTaxPeriod   = query.value(11).toInt();
+        ccdData.ccd.paymentTermType = query.value(12).toInt();
+        ccdData.ccd.paymentTermDate = query.value(13).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(13).toDate());
+        ccdData.ccd.paymentTermPeriod = query.value(14).isNull() ? OptionalInt() : query.value(14).toInt();
+        ccdData.paymentLimitDate = query.value(15).isNull() ? OptionalQDate() : databaseModel()->convertFromServer(query.value(15).toDate());
+        ccdData.zeroTaxLimitDate = databaseModel()->convertFromServer(query.value(16).toDate());
+        ccdData.ccd.createUserId = query.value(17).toLongLong();
+        ccdData.ccd.updateUserId = query.value(18).toLongLong();
+        ccdData.ccd.createTime   = databaseModel()->convertFromServer(query.value(19).toDateTime());
+        ccdData.ccd.updateTime   = databaseModel()->convertFromServer(query.value(20).toDateTime());
+        ccdData.contractNumber   = query.value(21).toString();
+        ccdData.passportNumber   = query.value(22).isNull() ? OptionalQString() : query.value(22).toString();
+        ccdData.currencyId       = query.value(23).toLongLong();
+        ccdData.currencyAlphabeticCode = query.value(24).toString();
+        return ccdData;
       }
     }
   }      

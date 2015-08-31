@@ -3,7 +3,7 @@ TRANSLATOR ma::chrono::ContractCardPage
 */
 
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -285,21 +285,21 @@ namespace ma
       for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
       {
         QWidget* widget = *it;        
-        if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
+        if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(widget))
         {
-          QObject::connect(edit, SIGNAL(textEdited(const QString&)), SLOT(on_lineEdit_textEdited(const QString&)));
+          QObject::connect(lineEdit, SIGNAL(textEdited(const QString&)), SLOT(on_lineEdit_textEdited(const QString&)));
         }
-        else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
+        else if (QTextEdit* textEdit = qobject_cast<QTextEdit*>(widget))
         {
-          QObject::connect(edit, SIGNAL(textChanged()), SLOT(on_textEdit_textChanged()));
+          QObject::connect(textEdit, SIGNAL(textChanged()), SLOT(on_textEdit_textChanged()));
         }        
-        else if (QDateEdit* edit = qobject_cast<QDateEdit*>(widget))
+        else if (QDateEdit* dateEdit = qobject_cast<QDateEdit*>(widget))
         {
-          QObject::connect(edit, SIGNAL(dateChanged(const QDate&)), SLOT(on_dateEdit_dateChanged(const QDate&)));
+          QObject::connect(dateEdit, SIGNAL(dateChanged(const QDate&)), SLOT(on_dateEdit_dateChanged(const QDate&)));
         }
-        else if (QCheckBox* edit = qobject_cast<QCheckBox*>(widget))
+        else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(widget))
         {
-          QObject::connect(edit, SIGNAL(stateChanged(int)), SLOT(on_checkBox_stateChanged(int)));
+          QObject::connect(checkBox, SIGNAL(stateChanged(int)), SLOT(on_checkBox_stateChanged(int)));
         }               
       }
     }
@@ -311,30 +311,7 @@ namespace ma
 
       Mode currentMode = mode();
       bool readOnly = viewMode == currentMode;
-      for (const_iterator it = dataAwareWidgets_.begin(), end = dataAwareWidgets_.end(); it != end; ++it)
-      {
-        QWidget* widget = *it;        
-        if (QLineEdit* edit = qobject_cast<QLineEdit*>(widget))
-        {
-          edit->setReadOnly(readOnly);          
-        }
-        else if (QAbstractSpinBox* edit = qobject_cast<QAbstractSpinBox*>(widget))
-        {
-          edit->setReadOnly(readOnly);          
-        }
-        else if (QTextEdit* edit = qobject_cast<QTextEdit*>(widget))
-        {
-          edit->setReadOnly(readOnly);          
-        }        
-        else if (QAbstractSpinBox* edit = qobject_cast<QAbstractSpinBox*>(widget))
-        {
-          edit->setReadOnly(readOnly);          
-        }
-        else 
-        {
-          widget->setEnabled(!readOnly);
-        }
-      }
+      WidgetUtility::setReadOnly(dataAwareWidgets_, readOnly);
 
       bool peristance = createMode != currentMode && entityId();      
       int generalTabIndex = ui_.tabWidget->indexOf(ui_.generalTab);      

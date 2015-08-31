@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2010-2014 Marat Abrarov (abrarov@gmail.com)
+// Copyright (c) 2010-2015 Marat Abrarov (abrarov@gmail.com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -17,6 +17,8 @@
 
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QProcessEnvironment>
+#include <ma/chrono/types_fwd.h>
 #include <ma/chrono/databasemodel_fwd.h>
 #include <ma/chrono/navigationwindow.h>
 #include <ma/chrono/excelexporter.h>
@@ -24,7 +26,15 @@
 #if defined(QT_STATIC) || !(defined(QT_DLL) || defined(QT_SHARED))
 
 #if QT_VERSION >= 0x050000
+
+#if defined(WIN32)
 Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+#else
+// todo: add support for the rest of platforms supported by Qt - 
+// import platform specific plugin with Q_IMPORT_PLUGIN macro.
+#error Platform specific Qt Platform Integration plugin should be imported
+#endif
+
 Q_IMPORT_PLUGIN(QSvgPlugin)
 Q_IMPORT_PLUGIN(QSvgIconPlugin)
 Q_IMPORT_PLUGIN(QIBaseDriverPlugin)
@@ -37,6 +47,10 @@ Q_IMPORT_PLUGIN(qsqlibase)
 #endif
 
 namespace {
+
+static const QString qtTranslation = QString::fromLatin1("qt_");
+static const QString qtBaseTranslation = QString::fromLatin1("qtbase_");
+static const QString chronoTranslation = QString::fromLatin1("chrono_");
 
 void installTranslation(QCoreApplication& application, const QString& path,
     const QString& localeName, const QString& baseFilename)
@@ -56,16 +70,35 @@ void setApplicationDescription(QCoreApplication& /*application*/)
   QCoreApplication::setApplicationName(QString::fromLatin1("Chrono"));
 }
 
+void installTranslations(QCoreApplication& application, 
+    const QString& path, const QString& localeName)
+{
+  installTranslation(application, path, localeName, qtTranslation);
+  installTranslation(application, path, localeName, qtBaseTranslation);
+  installTranslation(application, path, localeName, chronoTranslation);
+}
+
 void installSystemLocaleTranslation(QCoreApplication& application)
 {
-  QString translationPath(QString::fromLatin1(":/ma/chrono/translation/"));
   QString sysLocaleName(QLocale::system().name());
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("qt_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("qtbase_"));
-  installTranslation(application, translationPath, sysLocaleName, 
-      QString::fromLatin1("chrono_"));
+
+  QProcessEnvironment processEnvironment = 
+      QProcessEnvironment::systemEnvironment();
+  QString envChronoTranslations = processEnvironment.value(
+      QString::fromLatin1("CHRONO_TRANSLATIONS"));
+  QStringList translationPaths = envChronoTranslations.split(
+      QString::fromLatin1(";"), QString::SkipEmptyParts);
+
+  QString localTranslationPath(QCoreApplication::applicationDirPath()
+      + QString::fromLatin1("/translations"));
+  translationPaths << localTranslationPath;
+
+  typedef QStringList::const_iterator iterator_type;
+  for (iterator_type i = translationPaths.begin(), end = translationPaths.end();
+      i != end; ++i)  
+  {
+    installTranslations(application, *i, sysLocaleName);
+  }
 }
 
 void adjustDesktopAwareGeometry(QWidget& mainWindow)
@@ -107,6 +140,7 @@ int main(int argc, char* argv[])
     setApplicationDescription(application);
     installSystemLocaleTranslation(application);
 
+    ma::chrono::registerGenericMetaTypes();
     ma::chrono::registerDatabaseMetaTypes();
 
     ma::chrono::NavigationWindow navigationWindow;  
