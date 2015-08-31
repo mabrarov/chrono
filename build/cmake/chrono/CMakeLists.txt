@@ -552,10 +552,10 @@ set(QM_FILES )
 if(MSVC)
     if(NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16"))
         set_source_files_properties(
-            ${MP_COMPAT_CPP_SOURCES}
-            ${MOC_GENERATED_SOURCES}
-            ${RCC_GENERATED_SOURCES} 
-            PROPERTIES COMPILE_FLAGS /MP)
+            "${MP_COMPAT_CPP_SOURCES}"
+            "${MOC_GENERATED_SOURCES}"
+            "${RCC_GENERATED_SOURCES}"
+            PROPERTIES COMPILE_FLAGS "/MP")
     endif()
 endif()
 
